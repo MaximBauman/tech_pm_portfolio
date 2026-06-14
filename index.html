@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Портфолио Максима Баумана: Technical Project Manager, web, API, LLM, Telegram-боты и игровые спецпроекты."
+    />
+    <title>Максим Бауман | Technical Project Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="ambientCanvas" aria-hidden="true"></canvas>
+
+    <main class="site-shell">
+      <section class="home-view" id="homeView" aria-label="Главный экран портфолио">
+        <aside class="identity-panel">
+          <header class="topbar">
+            <a class="mark" href="#homeView" aria-label="На главный экран">MB</a>
+            <nav class="contact-links" aria-label="Контакты">
+              <a href="mailto:m.bauman.x@gmail.com">mail</a>
+              <a href="https://t.me/max_bauman" target="_blank" rel="noreferrer">telegram</a>
+            </nav>
+          </header>
+
+          <div class="hero-copy">
+            <p class="eyebrow">Technical Project Manager</p>
+            <h1>Максим Бауман</h1>
+            <p class="lead">
+              Управляю digital-разработкой на стыке presale, web, API-интеграций,
+              Telegram-ботов, LLM-сервисов и игровых спецпроектов.
+            </p>
+          </div>
+
+          <div class="signal-grid" aria-label="Ключевые факты">
+            <div>
+              <strong>8+ лет</strong>
+              <span>digital, web и маркетинг</span>
+            </div>
+            <div>
+              <strong>4+ года</strong>
+              <span>техническое управление</span>
+            </div>
+            <div>
+              <strong>AI / API</strong>
+              <span>LLM, Web API, Telegram API</span>
+            </div>
+          </div>
+
+          <section class="profile-section" aria-labelledby="about-title">
+            <div class="section-title">
+              <span></span>
+              <h2 id="about-title">Фокус</h2>
+            </div>
+            <div class="focus-list">
+              <article>
+                <h3>Presale</h3>
+                <p>Оценка реализуемости, рисков, сроков, стоимости и нужного состава команды.</p>
+              </article>
+              <article>
+                <h3>Delivery</h3>
+                <p>ТЗ, постановка задач, подрядчики, контроль качества, релиз и аналитика.</p>
+              </article>
+              <article>
+                <h3>AI / automation</h3>
+                <p>LLM-интеграции, внутренние сервисы, боты и автоматизация рабочих процессов.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="profile-section" aria-labelledby="skills-title">
+            <div class="section-title">
+              <span></span>
+              <h2 id="skills-title">Стек</h2>
+            </div>
+            <div class="skill-cloud">
+              <span>Agile</span><span>Kanban</span><span>Jira</span><span>Confluence</span>
+              <span>REST API</span><span>JSON</span><span>Telegram API</span><span>LLM</span>
+              <span>GigaChat</span><span>Figma</span><span>JavaScript</span><span>.NET 8</span>
+              <span>Postgres</span><span>Яндекс.Метрика</span><span>Apps Script</span>
+            </div>
+          </section>
+        </aside>
+
+        <section class="project-space" aria-labelledby="projects-title">
+          <header class="space-header">
+            <div>
+              <p class="eyebrow">Project launchpad</p>
+              <h2 id="projects-title">Клик по проекту запускает переход</h2>
+            </div>
+            <div class="space-actions">
+              <button class="control-button" id="shuffleButton" type="button">Shuffle</button>
+              <button class="control-button" id="pulseButton" type="button" aria-pressed="false">
+                Pulse
+              </button>
+            </div>
+          </header>
+
+          <div class="project-cloud" id="projectCloud">
+            <div class="radar" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="launch-core" aria-hidden="true">
+              <strong>cases</strong>
+              <span>click to enter</span>
+            </div>
+            <div class="project-nodes" id="projectNodes"></div>
+          </div>
+
+          <footer class="preview-strip" aria-label="Предпросмотр выбранного проекта">
+            <div class="preview-index" id="previewIndex">01</div>
+            <div>
+              <strong id="previewTitle">AI Presale Assistant</strong>
+              <span id="previewMeta">Internal / LLM-сервис</span>
+            </div>
+            <p id="previewHint">Выберите проект: экран развернётся в полноценный кейс.</p>
+          </footer>
+        </section>
+      </section>
+
+      <section class="case-view" id="caseView" aria-hidden="true">
+        <div class="case-bg" aria-hidden="true"></div>
+        <header class="case-topbar">
+          <button class="back-button" id="backButton" type="button" aria-label="Вернуться назад">
+            Back
+          </button>
+          <div class="case-progress">
+            <span id="caseCounter">01 / 09</span>
+            <strong id="caseClient">Internal</strong>
+          </div>
+        </header>
+
+        <div class="case-layout">
+          <section class="case-info" aria-labelledby="caseTitle">
+            <p class="eyebrow" id="caseType">LLM / Presale</p>
+            <h2 id="caseTitle">AI Presale Assistant</h2>
+            <p class="case-summary" id="caseSummary"></p>
+
+            <div class="case-role">
+              <span>Моя роль</span>
+              <p id="caseRole"></p>
+            </div>
+
+            <div class="case-columns">
+              <div>
+                <h3>Что внутри</h3>
+                <ul id="caseHighlights"></ul>
+              </div>
+              <div>
+                <h3>Стек</h3>
+                <div class="skill-cloud case-stack" id="caseStack"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-media" aria-label="Видео проекта">
+            <div class="media-frame">
+              <video id="caseVideo" autoplay muted loop playsinline></video>
+              <div class="fallback-visual" id="fallbackVisual" aria-hidden="true">
+                <div class="terminal-card">
+                  <span></span><span></span><span></span>
+                  <p>brief.analyze()</p>
+                  <p>risk.map()</p>
+                  <p>concept.generate()</p>
+                </div>
+                <div class="ai-grid">
+                  <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+            <div class="media-caption">
+              <span id="caseReference">Live reference</span>
+              <strong id="caseYear">2026</strong>
+            </div>
+          </section>
+        </div>
+
+        <nav class="case-nav" id="caseNav" aria-label="Переключение проектов"></nav>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
