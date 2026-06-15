@@ -4,45 +4,109 @@ const projects = [
     title: "AI Presale Assistant",
     shortTitle: "AI Presale",
     client: "Internal / СберСеллер",
-    type: "LLM-сервис",
+    type: "AI-сервис",
     year: "2026",
-    color: "#19a88b",
-    rgb: "25, 168, 139",
-    icon: "assets/icons/Vector.png",
-    x: 31,
-    y: 30,
-    role: "Продуктовая и техническая проработка MVP, логика анализа брифов, рисков и генерации креативных концепций.",
+    color: "#22ad7a",
+    rgb: "34, 173, 122",
+    iconText: "AI",
+    role:
+      "Проектирование MVP, UX-логики и AI-пайплайна; разработка локального прототипа с Codex и подготовка к корпоративному развёртыванию.",
     summary:
-      "Внутренний сервис автоматизации presale-процессов на базе LLM: анализ клиентских брифов, оценка рисков, исследование рынка и генерация концепций.",
+      "Внутренний AI-инструмент для автоматизации presale workflow: загрузка клиентских брифов, парсинг, аудит, анализ рынка, генерация креативных концепций и финального отчёта.",
     highlights: [
-      "Собрал рабочий локальный прототип с помощью Codex и AI-инструментов.",
-      "Проработал сценарии интеграции локальных AI-моделей, российских LLM API и поиска.",
-      "Подготовил проект к развёртыванию на корпоративной инфраструктуре вместе с DevOps.",
+      "Собран локальный рабочий сервис с модульным pipeline: файл, парсинг, аудит, рынок, концепты, отчёт.",
+      "Поддержаны локальные LLM-модели, российские LLM API и поисковые сервисы.",
+      "Интерфейс проектировался под реальную работу presale-команды: быстрый запуск, статусы, score и выгрузки.",
     ],
-    stack: ["LLM", "GigaChat", "Web API", "Codex", "Search API", "MVP", "DevOps handoff"],
+    stack: ["Python", "HTML", "CSS", "JavaScript", "LLM", "Search API", "Codex", "Local models"],
+    media: [
+      {
+        type: "image",
+        src: "assets/cases/ai/ai-upload.png",
+        label: "AI Presale Assistant / upload workspace",
+      },
+      {
+        type: "image",
+        src: "assets/cases/ai/ai-processing.png",
+        label: "AI processing overlay",
+      },
+      {
+        type: "image",
+        src: "assets/cases/ai/ai-results.png",
+        label: "AI audit result and presale score",
+      },
+    ],
   },
   {
-    id: "takzdorovo",
-    title: "Не отменяй свою жизнь",
-    shortTitle: "Так здорово",
-    client: "Минздрав",
-    type: "Тест + контент",
-    year: "2023",
-    color: "#e30613",
-    rgb: "227, 6, 19",
-    icon: "assets/icons/TakZdorovoFav.svg",
-    video: "assets/screencasts/TakZdorovo.mp4",
-    x: 58,
-    y: 20,
-    role: "Технический менеджер проекта: ТЗ, подрядчики, интерактивные сценарии, QA и запуск.",
+    id: "sales-flow-crm",
+    title: "Sales Flow CRM",
+    shortTitle: "Sales Flow",
+    client: "Internal CRM",
+    type: "CRM + аналитика",
+    year: "2026",
+    color: "#2f86ff",
+    rgb: "47, 134, 255",
+    iconText: "SF",
+    role:
+      "Проектирование и разработка кастомной CRM для проактивов, клиентских воронок, статусов, фильтров и управленческой аналитики.",
     summary:
-      "Одностраничный проект Минздрава с тестом, персональными рекомендациями, чек-листами, подкастами и дополнительными материалами.",
+      "Внутренняя CRM-система для управления проактивными предложениями, клиентской воронкой и общей аналитикой продаж. Проект разработан с Codex.",
     highlights: [
-      "Декомпозировал тестовую механику, контентные блоки и пользовательские состояния.",
-      "Синхронизировал клиентские правки, технические ограничения и сроки запуска.",
-      "Контролировал адаптивность, QA и подготовку релиза.",
+      "Рабочие пространства проактивов: карточки клиентов, статусы и фильтры.",
+      "Аналитика: воронка статусов, деньги по статусам, экспорт CSV/PDF/PPTX.",
+      "Интерфейс для ежедневной работы sales/presale-команды, а не демо-витрина.",
     ],
-    stack: ["Figma", "HTML", "CSS", "JavaScript", "Analytics", "QA", "Jira"],
+    stack: [".NET 8", "Postgres", "Bootstrap", "HTML", "CSS", "JavaScript", "Codex", "Analytics"],
+    media: [
+      {
+        type: "image",
+        src: "assets/cases/crm/crm-dashboard.png",
+        label: "Sales Flow dashboard",
+      },
+      {
+        type: "image",
+        src: "assets/cases/crm/crm-workspace.png",
+        label: "Client funnel workspace",
+      },
+      {
+        type: "image",
+        src: "assets/cases/crm/crm-all-analytics.png",
+        label: "Global analytics",
+      },
+      {
+        type: "image",
+        src: "assets/cases/crm/crm-promo-stats.png",
+        label: "Promo analytics",
+      },
+    ],
+  },
+  {
+    id: "estimate-builder",
+    title: "Конструктор смет",
+    shortTitle: "Сметы",
+    client: "Internal tool",
+    type: "Costing service",
+    year: "2026",
+    color: "#f0b429",
+    rgb: "240, 180, 41",
+    iconText: "₽",
+    role:
+      "Проектирование internal-сервиса, который заменяет ручной расчёт digital-проектов в таблицах и помогает стандартизировать оценку.",
+    summary:
+      "Внутренний сервис для расчёта стоимости digital-проектов с ролями, структурой работ и подготовкой оценки для presale. Скрин заменён безопасным AI-placeholder из-за коммерческой информации.",
+    highlights: [
+      "Перевёл ручной табличный процесс в продуктовую логику с ролями и контролируемой структурой.",
+      "Сервис помогает быстрее собирать сметы и уменьшает риск ошибок на этапе presale.",
+      "Рабочий интерфейс и логика разработаны с использованием Codex.",
+    ],
+    stack: [".NET 8", "Postgres", "Bootstrap", "HTML", "CSS", "JavaScript", "Codex"],
+    media: [
+      {
+        type: "image",
+        src: "assets/cases/ai/ai-processing.png",
+        label: "Internal tool placeholder",
+      },
+    ],
   },
   {
     id: "pik",
@@ -54,9 +118,6 @@ const projects = [
     color: "#fc4c02",
     rgb: "252, 76, 2",
     icon: "assets/icons/pikFav.png",
-    video: "assets/screencasts/pikmegamarket.mp4",
-    x: 78,
-    y: 34,
     role: "ТЗ, API-интеграция, постановка задач разработчикам, контроль сроков и клиентских правок.",
     summary:
       "Web-проект с API-интеграцией и обработкой пользовательских данных для промо-механики бренда.",
@@ -66,52 +127,72 @@ const projects = [
       "Контролировал запуск и корректность пользовательских сценариев.",
     ],
     stack: ["REST API", "JSON", "Web API", "JavaScript", "Jira", "Confluence", "Яндекс.Метрика"],
+    media: [{ type: "video", src: "assets/screencasts/pikmegamarket.mp4", label: "Screencast reference" }],
   },
   {
-    id: "vtb-report",
-    title: "Как сдать годовой отчёт правильно",
-    shortTitle: "ВТБ отчёт",
-    client: "ВТБ",
-    type: "Longread + test",
-    year: "2024",
+    id: "vich",
+    title: "Ваше дело: болезнь без лица",
+    shortTitle: "ВИЧ",
+    client: "Минздрав",
+    type: "Social impact",
+    year: "2025",
+    color: "#e84f3d",
+    rgb: "232, 79, 61",
+    icon: "assets/icons/TakZdorovoFav.svg",
+    role:
+      "Технический менеджер проекта: ТЗ, подрядчики, интерактивные сценарии, QA, аналитика и запуск.",
+    summary:
+      "Интерактивный образовательный web-проект о ВИЧ-инфекции. Победитель Silver Mercury в Pure Audience и бронзовый призёр среди социально значимых проектов.",
+    highlights: [
+      "Декомпозировал интерактивную механику и контентную структуру в задачи для разработки.",
+      "Синхронизировал клиентские правки, ограничения и сроки запуска.",
+      "Контролировал качество пользовательского пути и готовность проекта к публикации.",
+    ],
+    stack: ["Figma", "HTML", "CSS", "JavaScript", "Analytics", "QA", "Jira"],
+    media: [{ type: "video", src: "assets/screencasts/TakZdorovo.mp4", label: "Related social project reference" }],
+  },
+  {
+    id: "kids-rules",
+    title: "Детские правила",
+    shortTitle: "Детские правила",
+    client: "Сбер",
+    type: "Cybersecurity interactive",
+    year: "2025",
+    color: "#7a63d8",
+    rgb: "122, 99, 216",
+    iconText: "DR",
+    role:
+      "Подготовка ТЗ, описание интерактивных сценариев и контроль реализации образовательного web-проекта.",
+    summary:
+      "Интерактивный проект по теме кибербезопасности для взрослой аудитории: сложную тему нужно было упаковать в понятный, вовлекающий формат.",
+    highlights: [
+      "Описал сценарии, состояния интерфейса и требования к адаптивности.",
+      "Согласовывал механику с клиентом и подрядчиками.",
+      "Контролировал QA и корректность аналитики.",
+    ],
+    stack: ["Figma", "HTML", "CSS", "JavaScript", "QA", "Analytics"],
+    media: [],
+  },
+  {
+    id: "currency",
+    title: "Валюта для любых целей",
+    shortTitle: "Валюта",
+    client: "Сбер",
+    type: "Currency API",
+    year: "2025",
     color: "#234be7",
     rgb: "35, 75, 231",
     icon: "assets/icons/vtbFav.png",
-    video: "assets/screencasts/vtbInstruction.mp4",
-    x: 47,
-    y: 47,
-    role: "Техническое сопровождение лендинга: интерактив, структура, проверка реализации и запуск.",
+    role: "Техническая проработка API курсов валют, карт и fallback-сценариев.",
     summary:
-      "Интерактивный спецпроект для предпринимателей о годовой бухгалтерской и налоговой отчётности, дедлайнах и подготовке документов.",
+      "Web-проект с API-интеграцией курсов валют и использованием Yandex Maps API в пользовательском сценарии.",
     highlights: [
-      "Согласовывал структуру лонгрида, тестовой механики и интерактивных блоков.",
-      "Контролировал корректность адаптивной реализации и визуальных состояний.",
-      "Проверял сборку и готовность к публикации.",
+      "Описал требования к внешним API и состояниям интерфейса.",
+      "Согласовывал ограничения интеграций между клиентом и разработкой.",
+      "Контролировал тестирование сценариев с картой и динамическими данными.",
     ],
-    stack: ["HTML", "CSS", "JavaScript", "Longread", "Test mechanic", "QA", "Analytics"],
-  },
-  {
-    id: "green-day",
-    title: "Поймайте скидку",
-    shortTitle: "Green Day",
-    client: "СберСтрахование",
-    type: "Promo + parallax",
-    year: "2024",
-    color: "#403470",
-    rgb: "64, 52, 112",
-    icon: "assets/icons/greenDay.png",
-    video: "assets/screencasts/GreenDay.mp4",
-    x: 68,
-    y: 61,
-    role: "ТЗ, интерактивная промо-механика, контроль анимаций, backend-сценариев и запуска.",
-    summary:
-      "Промо-проект СберСтрахования с интерактивной механикой, параллакс-анимациями, backend-частью и шеринговыми сценариями.",
-    highlights: [
-      "Формализовал пользовательские сценарии поиска скидки и участия в промо.",
-      "Координировал анимации, backend-логику, дизайн и разработку.",
-      "Контролировал адаптив, аналитику и готовность к запуску.",
-    ],
-    stack: ["JavaScript", "Parallax", "Backend", "Sharing", "Responsive", "QA", "Analytics"],
+    stack: ["REST API", "JSON", "Yandex Maps API", "JavaScript", "QA", "Analytics"],
+    media: [],
   },
   {
     id: "crossy",
@@ -123,9 +204,6 @@ const projects = [
     color: "#55b320",
     rgb: "85, 179, 32",
     icon: "assets/icons/CrossyFav.png",
-    video: "assets/screencasts/FonCrossyRoad.mp4",
-    x: 26,
-    y: 67,
     role: "Техническое ведение браузерной игры: механика, постановка задач, адаптивность, QA.",
     summary:
       "Браузерная игра в стиле Crossy Road для вовлечения аудитории и удержания внимания внутри спецпроекта.",
@@ -135,6 +213,7 @@ const projects = [
       "Синхронизировал креатив, разработку и клиентские ожидания.",
     ],
     stack: ["Three.js", "JavaScript", "Game loop", "Responsive", "QA", "Jira"],
+    media: [{ type: "video", src: "assets/screencasts/FonCrossyRoad.mp4", label: "Screencast reference" }],
   },
   {
     id: "territory",
@@ -146,9 +225,6 @@ const projects = [
     color: "#0e2924",
     rgb: "14, 41, 36",
     icon: "assets/icons/PaperIo.png",
-    video: "assets/screencasts/fonSnake.mp4",
-    x: 84,
-    y: 74,
     role: "Формализация real-time механики, рисков нагрузки, состояний игры и тестирования.",
     summary:
       "Многопользовательская браузерная игра с real-time взаимодействием пользователей, по духу близкая к Slither.io.",
@@ -158,6 +234,7 @@ const projects = [
       "Контролировал запуск с учётом UX, QA и клиентских ограничений.",
     ],
     stack: ["Real-time", "WebSocket logic", "JavaScript", "QA", "Risk management", "Jira"],
+    media: [{ type: "video", src: "assets/screencasts/fonSnake.mp4", label: "Screencast reference" }],
   },
   {
     id: "insurance",
@@ -169,9 +246,6 @@ const projects = [
     color: "#007252",
     rgb: "0, 114, 82",
     icon: "assets/icons/KaskoFav.png",
-    video: "assets/screencasts/sbskasko.mp4",
-    x: 42,
-    y: 82,
     role: "Подготовка ТЗ, механики участия, контроль подрядчиков, аналитики и клиентских согласований.",
     summary:
       "Промо-лендинг КАСКО с конкурсной механикой, регистрационной формой и пользовательской базой.",
@@ -181,6 +255,7 @@ const projects = [
       "Следил за корректностью аналитики и готовностью к запуску.",
     ],
     stack: ["JavaScript", "Forms", "Backend", "Analytics", "Jira", "QA"],
+    media: [{ type: "video", src: "assets/screencasts/sbskasko.mp4", label: "Screencast reference" }],
   },
   {
     id: "donor",
@@ -192,9 +267,6 @@ const projects = [
     color: "#f57dc3",
     rgb: "245, 125, 195",
     icon: "assets/icons/donorFav.png",
-    video: "assets/screencasts/Donorstvo.mp4",
-    x: 17,
-    y: 43,
     role: "Техническое сопровождение контентного лендинга с анимациями и адаптивом.",
     summary:
       "Образовательно-просветительский лендинг о донорстве костного мозга с эмоциональной подачей и анимационными секвенциями.",
@@ -204,55 +276,82 @@ const projects = [
       "Вёл техническую коммуникацию с командой и клиентом.",
     ],
     stack: ["HTML", "CSS", "JavaScript", "Animation", "Figma", "QA"],
+    media: [{ type: "video", src: "assets/screencasts/Donorstvo.mp4", label: "Screencast reference" }],
   },
 ];
 
 const state = {
   activeId: projects[0].id,
-  pulse: false,
-  pointerX: 0,
-  pointerY: 0,
+  activeMediaIndex: 0,
+  flowPaused: false,
 };
 
 const root = document.documentElement;
 const projectNodes = document.querySelector("#projectNodes");
-const projectCloud = document.querySelector("#projectCloud");
 const shuffleButton = document.querySelector("#shuffleButton");
 const pulseButton = document.querySelector("#pulseButton");
 const previewIndex = document.querySelector("#previewIndex");
 const previewTitle = document.querySelector("#previewTitle");
 const previewMeta = document.querySelector("#previewMeta");
 const caseView = document.querySelector("#caseView");
+const mediaFrame = document.querySelector("#mediaFrame");
 const caseVideo = document.querySelector("#caseVideo");
+const caseImage = document.querySelector("#caseImage");
 const fallbackVisual = document.querySelector("#fallbackVisual");
 const backButton = document.querySelector("#backButton");
 const caseNav = document.querySelector("#caseNav");
+const mediaPills = document.querySelector("#mediaPills");
 
 function setAccent(project) {
   root.style.setProperty("--accent", project.color);
   root.style.setProperty("--accent-rgb", project.rgb);
 }
 
+function projectIconMarkup(project) {
+  if (project.icon) {
+    return `<img src="${project.icon}" alt="" />`;
+  }
+
+  return `<span class="project-letter">${project.iconText || project.shortTitle.slice(0, 2)}</span>`;
+}
+
+function projectButtonMarkup(project, index, copyIndex) {
+  return `
+    <button
+      class="project-node"
+      type="button"
+      data-project="${project.id}"
+      data-copy="${copyIndex}"
+      style="--node-rgb: ${project.rgb}"
+      aria-label="Открыть проект ${project.title}"
+    >
+      <span class="project-icon">${projectIconMarkup(project)}</span>
+      <span>
+        <span class="node-kicker">${String(index + 1).padStart(2, "0")} / ${project.client}</span>
+        <span class="node-title">${project.shortTitle}</span>
+        <span class="node-type">${project.type}</span>
+      </span>
+    </button>
+  `;
+}
+
 function renderProjectNodes() {
-  projectNodes.innerHTML = projects
-    .map(
-      (project, index) => `
-        <button
-          class="project-node"
-          type="button"
-          data-project="${project.id}"
-          style="--x: ${project.x}%; --y: ${project.y}%; --delay: ${-index * 0.47}s; --node-rgb: ${project.rgb}"
-          aria-label="Открыть проект ${project.title}"
-        >
-          <span class="project-icon"><img src="${project.icon}" alt="" /></span>
-          <span>
-            <span class="node-kicker">${String(index + 1).padStart(2, "0")} / ${project.client}</span>
-            <span class="node-title">${project.shortTitle}</span>
-            <span class="node-type">${project.type}</span>
-          </span>
-        </button>
-      `,
-    )
+  const rows = [
+    { items: projects, copy: 0 },
+    { items: [...projects].reverse(), copy: 1 },
+  ];
+
+  projectNodes.innerHTML = rows
+    .map(({ items, copy }, rowIndex) => {
+      const doubledItems = [...items, ...items];
+      return `
+        <div class="marquee-row marquee-row-${rowIndex + 1}">
+          ${doubledItems
+            .map((project, index) => projectButtonMarkup(project, projects.indexOf(project), `${copy}-${index}`))
+            .join("")}
+        </div>
+      `;
+    })
     .join("");
 
   projectNodes.querySelectorAll(".project-node").forEach((node) => {
@@ -267,7 +366,7 @@ function renderCaseNav() {
     .map(
       (project) => `
         <button type="button" data-project="${project.id}">
-          <img src="${project.icon}" alt="" />
+          <span class="case-nav-icon">${projectIconMarkup(project)}</span>
           <span>${project.shortTitle}</span>
         </button>
       `,
@@ -301,6 +400,7 @@ function openCase(id, originElement) {
   const project = getProject(id);
   const index = projects.findIndex((item) => item.id === project.id);
   state.activeId = project.id;
+  state.activeMediaIndex = 0;
   setAccent(project);
 
   const rect = originElement?.getBoundingClientRect();
@@ -309,22 +409,58 @@ function openCase(id, originElement) {
   root.style.setProperty("--origin-x", `${Math.round(x)}px`);
   root.style.setProperty("--origin-y", `${Math.round(y)}px`);
 
-  document.querySelector("#caseCounter").textContent = `${String(index + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
+  document.querySelector("#caseCounter").textContent =
+    `${String(index + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
   document.querySelector("#caseClient").textContent = project.client;
   document.querySelector("#caseType").textContent = project.type;
   document.querySelector("#caseTitle").textContent = project.title;
   document.querySelector("#caseSummary").textContent = project.summary;
   document.querySelector("#caseRole").textContent = project.role;
-  document.querySelector("#caseReference").textContent = project.video ? "Screencast reference" : "Prototype reference";
   document.querySelector("#caseYear").textContent = project.year;
-  document.querySelector("#caseHighlights").innerHTML = project.highlights.map((item) => `<li>${item}</li>`).join("");
+  document.querySelector("#caseHighlights").innerHTML = project.highlights
+    .map((item) => `<li>${item}</li>`)
+    .join("");
   document.querySelector("#caseStack").innerHTML = project.stack.map((item) => `<span>${item}</span>`).join("");
 
-  if (project.video) {
-    fallbackVisual.classList.remove("is-visible");
+  caseNav.querySelectorAll("button").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.project === project.id);
+  });
+
+  renderMedia(project, 0);
+  caseView.scrollTop = 0;
+  caseView.setAttribute("aria-hidden", "false");
+  document.body.classList.add("case-open");
+}
+
+function renderMedia(project, mediaIndex) {
+  const media = project.media || [];
+  const item = media[mediaIndex];
+  state.activeMediaIndex = mediaIndex;
+
+  if (!item) {
+    mediaFrame.style.setProperty("--media-ratio", "16 / 9");
+    caseVideo.pause();
+    caseVideo.removeAttribute("src");
+    caseVideo.load();
+    caseVideo.style.display = "none";
+    caseImage.removeAttribute("src");
+    caseImage.style.display = "none";
+    fallbackVisual.classList.add("is-visible");
+    document.querySelector("#caseReference").textContent = "Protected internal reference";
+    mediaPills.innerHTML = "";
+    return;
+  }
+
+  fallbackVisual.classList.remove("is-visible");
+  document.querySelector("#caseReference").textContent = item.label;
+
+  if (item.type === "video") {
+    mediaFrame.style.setProperty("--media-ratio", "16 / 9");
+    caseImage.removeAttribute("src");
+    caseImage.style.display = "none";
     caseVideo.style.display = "block";
-    if (!caseVideo.src.endsWith(project.video)) {
-      caseVideo.src = project.video;
+    if (caseVideo.getAttribute("src") !== item.src) {
+      caseVideo.src = item.src;
     }
     caseVideo.play().catch(() => {});
   } else {
@@ -332,15 +468,37 @@ function openCase(id, originElement) {
     caseVideo.removeAttribute("src");
     caseVideo.load();
     caseVideo.style.display = "none";
-    fallbackVisual.classList.add("is-visible");
+    caseImage.src = item.src;
+    caseImage.alt = item.label;
+    caseImage.style.display = "block";
+    caseImage.onload = () => {
+      if (caseImage.naturalWidth && caseImage.naturalHeight && caseImage.getAttribute("src") === item.src) {
+        mediaFrame.style.setProperty("--media-ratio", `${caseImage.naturalWidth} / ${caseImage.naturalHeight}`);
+      }
+    };
+
+    if (caseImage.complete && caseImage.naturalWidth && caseImage.naturalHeight) {
+      mediaFrame.style.setProperty("--media-ratio", `${caseImage.naturalWidth} / ${caseImage.naturalHeight}`);
+    }
   }
 
-  caseNav.querySelectorAll("button").forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.project === project.id);
-  });
-
-  caseView.setAttribute("aria-hidden", "false");
-  document.body.classList.add("case-open");
+  mediaPills.innerHTML =
+    media.length > 1
+      ? media
+          .map(
+            (mediaItem, index) => `
+              <button
+                type="button"
+                data-media-index="${index}"
+                class="${index === mediaIndex ? "is-active" : ""}"
+                aria-label="Показать медиа ${index + 1}: ${mediaItem.label}"
+              >
+                ${String(index + 1).padStart(2, "0")}
+              </button>
+            `,
+          )
+          .join("")
+      : "";
 }
 
 function closeCase() {
@@ -349,46 +507,18 @@ function closeCase() {
   caseVideo.pause();
 }
 
-function shuffleProjects() {
+function openRandomProject() {
   const next = projects[Math.floor(Math.random() * projects.length)];
-  const node = projectNodes.querySelector(`[data-project="${next.id}"]`);
-  if (node) {
-    selectPreview(next.id);
-    node.animate(
-      [
-        { transform: "translate(-50%, -50%) scale(1)" },
-        { transform: "translate(-50%, -50%) scale(1.08)" },
-        { transform: "translate(-50%, -50%) scale(1)" },
-      ],
-      { duration: 320, easing: "ease-out" },
-    );
-  }
+  const node = projectNodes.querySelector(`.project-node[data-project="${next.id}"]`);
+  selectPreview(next.id);
+  openCase(next.id, node);
 }
 
-function setupPointerMagnet() {
-  projectCloud.addEventListener("pointermove", (event) => {
-    const rect = projectCloud.getBoundingClientRect();
-    state.pointerX = (event.clientX - rect.left) / rect.width - 0.5;
-    state.pointerY = (event.clientY - rect.top) / rect.height - 0.5;
-  });
-
-  projectCloud.addEventListener("pointerleave", () => {
-    state.pointerX = 0;
-    state.pointerY = 0;
-  });
-
-  function frame(time) {
-    const nodes = projectNodes.querySelectorAll(".project-node");
-    nodes.forEach((node, index) => {
-      const drift = state.pulse ? 16 : 8;
-      const x = Math.sin(time * 0.001 + index * 1.7) * drift + state.pointerX * (index % 2 ? 18 : -14);
-      const y = Math.cos(time * 0.0012 + index * 1.4) * drift + state.pointerY * (index % 2 ? -10 : 16);
-      node.style.translate = `${x}px ${y}px`;
-    });
-    requestAnimationFrame(frame);
-  }
-
-  requestAnimationFrame(frame);
+function toggleFlow() {
+  state.flowPaused = !state.flowPaused;
+  document.body.classList.toggle("flow-paused", state.flowPaused);
+  pulseButton.setAttribute("aria-pressed", String(state.flowPaused));
+  pulseButton.textContent = state.flowPaused ? "Resume" : "Pause";
 }
 
 function setupAmbientCanvas() {
@@ -455,26 +585,28 @@ function setupAmbientCanvas() {
   draw();
 }
 
-shuffleButton.addEventListener("click", shuffleProjects);
-
-pulseButton.addEventListener("click", () => {
-  state.pulse = !state.pulse;
-  pulseButton.setAttribute("aria-pressed", String(state.pulse));
-});
-
+shuffleButton.addEventListener("click", openRandomProject);
+pulseButton.addEventListener("click", toggleFlow);
 backButton.addEventListener("click", closeCase);
+
+mediaPills.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-media-index]");
+  if (!button) return;
+
+  const project = getProject(state.activeId);
+  renderMedia(project, Number(button.dataset.mediaIndex));
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && document.body.classList.contains("case-open")) {
     closeCase();
   }
   if (event.key.toLowerCase() === "p" && !document.body.classList.contains("case-open")) {
-    pulseButton.click();
+    toggleFlow();
   }
 });
 
 renderProjectNodes();
 renderCaseNav();
 selectPreview(projects[0].id);
-setupPointerMagnet();
 setupAmbientCanvas();
