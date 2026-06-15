@@ -28,8 +28,8 @@
             <p class="eyebrow">Technical Project Manager</p>
             <h1>Максим Бауман</h1>
             <p class="lead">
-              Управляю digital-разработкой на стыке presale, web, API-интеграций,
-              Telegram-ботов, LLM-сервисов и игровых спецпроектов.
+              Веду digital-продукты от presale и архитектуры до запуска: web-сервисы,
+              AI-инструменты, CRM, API-интеграции, Telegram-боты и игровые спецпроекты.
             </p>
           </div>
 
@@ -43,8 +43,8 @@
               <span>техническое управление</span>
             </div>
             <div>
-              <strong>AI / API</strong>
-              <span>LLM, Web API, Telegram API</span>
+              <strong>Codex-built</strong>
+              <span>AI-сервисы, CRM, internal tools</span>
             </div>
           </div>
 
@@ -64,7 +64,7 @@
               </article>
               <article>
                 <h3>AI / automation</h3>
-                <p>LLM-интеграции, внутренние сервисы, боты и автоматизация рабочих процессов.</p>
+                <p>LLM-интеграции, Codex-разработка, внутренние сервисы и автоматизация процессов.</p>
               </article>
             </div>
           </section>
@@ -77,8 +77,9 @@
             <div class="skill-cloud">
               <span>Agile</span><span>Kanban</span><span>Jira</span><span>Confluence</span>
               <span>REST API</span><span>JSON</span><span>Telegram API</span><span>LLM</span>
-              <span>GigaChat</span><span>Figma</span><span>JavaScript</span><span>.NET 8</span>
-              <span>Postgres</span><span>Яндекс.Метрика</span><span>Apps Script</span>
+              <span>Python</span><span>Codex</span><span>Figma</span><span>JavaScript</span>
+              <span>.NET 8</span><span>Bootstrap</span><span>Postgres</span>
+              <span>Яндекс.Метрика</span><span>Apps Script</span>
             </div>
           </section>
         </aside>
@@ -86,13 +87,13 @@
         <section class="project-space" aria-labelledby="projects-title">
           <header class="space-header">
             <div>
-              <p class="eyebrow">Project launchpad</p>
-              <h2 id="projects-title">Клик по проекту запускает переход</h2>
+              <p class="eyebrow">Project stream</p>
+              <h2 id="projects-title">Кейсы уходят под профиль и возвращаются</h2>
             </div>
             <div class="space-actions">
-              <button class="control-button" id="shuffleButton" type="button">Shuffle</button>
+              <button class="control-button" id="shuffleButton" type="button">Random</button>
               <button class="control-button" id="pulseButton" type="button" aria-pressed="false">
-                Pulse
+                Pause
               </button>
             </div>
           </header>
@@ -102,8 +103,8 @@
               <span></span><span></span><span></span><span></span>
             </div>
             <div class="launch-core" aria-hidden="true">
-              <strong>cases</strong>
-              <span>click to enter</span>
+              <strong>flow</strong>
+              <span>click case</span>
             </div>
             <div class="project-nodes" id="projectNodes"></div>
           </div>
@@ -112,9 +113,9 @@
             <div class="preview-index" id="previewIndex">01</div>
             <div>
               <strong id="previewTitle">AI Presale Assistant</strong>
-              <span id="previewMeta">Internal / LLM-сервис</span>
+              <span id="previewMeta">Internal / AI-сервис</span>
             </div>
-            <p id="previewHint">Выберите проект: экран развернётся в полноценный кейс.</p>
+            <p id="previewHint">Карточки идут потоком. Клик переводит в полноценный кейс.</p>
           </footer>
         </section>
       </section>
@@ -155,8 +156,9 @@
           </section>
 
           <section class="case-media" aria-label="Видео проекта">
-            <div class="media-frame">
+            <div class="media-frame" id="mediaFrame">
               <video id="caseVideo" autoplay muted loop playsinline></video>
+              <img id="caseImage" src="" alt="" />
               <div class="fallback-visual" id="fallbackVisual" aria-hidden="true">
                 <div class="terminal-card">
                   <span></span><span></span><span></span>
@@ -173,6 +175,7 @@
               <span id="caseReference">Live reference</span>
               <strong id="caseYear">2026</strong>
             </div>
+            <div class="media-pills" id="mediaPills" aria-label="Медиа проекта"></div>
           </section>
         </div>
 
