@@ -165,8 +165,10 @@ const projects = [
     client: "Сбер",
     type: "Cybersecurity interactive",
     year: "2025",
-    color: "#7a63d8",
-    rgb: "122, 99, 216",
+    color: "#22a036",
+    rgb: "34, 160, 54",
+    icon: "assets/cases/sber-logo-ru.png",
+
     iconText: "DR",
     role:
       "Подготовка ТЗ, описание интерактивных сценариев и контроль реализации образовательного web-проекта.",
@@ -178,7 +180,57 @@ const projects = [
       "Контролировал QA и корректность аналитики.",
     ],
     stack: ["Figma", "HTML", "CSS", "JavaScript", "QA", "Analytics"],
-    media: [],
+    media: [{
+        type: "image",
+        src: "assets/cases/first_page_rules.png",
+        label: "Главная страница",
+      },
+      {
+        type: "image",
+        src: "assets/cases/first_screen_rules.png",
+        label: "Первый экран",
+      },
+      {
+        type: "image",
+        src: "assets/cases/video_rules.png",
+        label: "Видео с историей и правилами",
+      },
+      {
+        type: "image",
+        src: "assets/cases/story_rules.png",
+        label: "История",
+      },
+      {
+        type: "image",
+        src: "assets/cases/promo_rules.png",
+        label: "Промо-материалы",
+      },
+      {
+        type: "image",
+        src: "assets/cases/statistick_rules.png",
+        label: "Статистика",
+      },
+      {
+        type: "image",
+        src: "assets/cases/game_start_rules.png",
+        label: "Старт игры",
+      },
+      {
+        type: "image",
+        src: "assets/cases/ques_rules.png",
+        label: "Вопросы",
+      },
+      {
+        type: "image",
+        src: "assets/cases/answ_rules.png",
+        label: "Ответ на вопрос",
+      },
+      {
+        type: "image",
+        src: "assets/cases/game_result_rules.png",
+        label: "Результат игры",
+      },
+    ],
   },
   {
     id: "currency",
@@ -187,9 +239,9 @@ const projects = [
     client: "Сбер",
     type: "Currency API",
     year: "2025",
-    color: "#234be7",
-    rgb: "35, 75, 231",
-    icon: "assets/icons/vtbFav.png",
+    color: "#21a038",
+    rgb: "33, 160, 56",
+    icon: "assets/cases/sber-logo-ru.png",
     role: "Техническая проработка API курсов валют, карт и fallback-сценариев.",
     summary:
       "Web-проект с API-интеграцией курсов валют и использованием Yandex Maps API в пользовательском сценарии.",
@@ -199,7 +251,16 @@ const projects = [
       "Контролировал тестирование сценариев с картой и динамическими данными.",
     ],
     stack: ["REST API", "JSON", "Yandex Maps API", "JavaScript", "QA", "Analytics"],
-    media: [],
+    media: [{
+        type: "image",
+        src: "assets/cases/page.png",
+        label: "Главный экран",
+      },
+      {
+        type: "image",
+        src: "assets/cases/banner.png",
+        label: "Баннер",
+      },],
   },
   {
     id: "crossy",
