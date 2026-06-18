@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <canvas id="ambientCanvas" aria-hidden="true"></canvas>
-
     <main class="site-shell">
       <section class="home-view" id="homeView" aria-label="Главный экран портфолио">
         <aside class="identity-panel">
@@ -87,36 +85,37 @@
         <section class="project-space" aria-labelledby="projects-title">
           <header class="space-header">
             <div>
-              <p class="eyebrow">Project stream</p>
-              <h2 id="projects-title">Кейсы уходят под профиль и возвращаются</h2>
+              <h2 id="projects-title">Примеры некоторых проектов</h2>
             </div>
             <div class="space-actions">
-              <button class="control-button" id="shuffleButton" type="button">Random</button>
-              <button class="control-button" id="pulseButton" type="button" aria-pressed="false">
-                Pause
+              <button class="control-button icon-button" id="prevButton" type="button" aria-label="Предыдущий проект">
+                ←
+              </button>
+              <button
+                class="control-button icon-button autoplay-button"
+                id="pulseButton"
+                type="button"
+                aria-label="Приостановить автопереключение"
+                aria-pressed="false"
+                title="Приостановить автопереключение"
+              >
+                <span class="media-control-icon is-pause" aria-hidden="true"></span>
+              </button>
+              <button class="control-button icon-button" id="nextButton" type="button" aria-label="Следующий проект">
+                →
               </button>
             </div>
           </header>
 
-          <div class="project-cloud" id="projectCloud">
-            <div class="radar" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
+          <div class="project-showcase" id="projectShowcase">
+            <div class="showcase-status" aria-hidden="true">
+              <span id="showcaseCounter">01 / 11</span>
+              <span>Автопереключение</span>
             </div>
-            <div class="launch-core" aria-hidden="true">
-              <strong>flow</strong>
-              <span>click case</span>
-            </div>
-            <div class="project-nodes" id="projectNodes"></div>
+            <div class="showcase-slides" id="projectNodes"></div>
+            <nav class="project-pagination" id="projectIndex" aria-label="Выбор проекта"></nav>
+            <div class="showcase-progress" aria-hidden="true"><span id="showcaseProgress"></span></div>
           </div>
-
-          <footer class="preview-strip" aria-label="Предпросмотр выбранного проекта">
-            <div class="preview-index" id="previewIndex">01</div>
-            <div>
-              <strong id="previewTitle">AI Presale Assistant</strong>
-              <span id="previewMeta">Internal / AI-сервис</span>
-            </div>
-            <p id="previewHint">Карточки идут потоком. Клик переводит в полноценный кейс.</p>
-          </footer>
         </section>
       </section>
 
@@ -124,7 +123,7 @@
         <div class="case-bg" aria-hidden="true"></div>
         <header class="case-topbar">
           <button class="back-button" id="backButton" type="button" aria-label="Вернуться назад">
-            Back
+            Назад
           </button>
           <div class="case-progress">
             <span id="caseCounter">01 / 09</span>
@@ -137,6 +136,7 @@
             <p class="eyebrow" id="caseType">LLM / Presale</p>
             <h2 id="caseTitle">AI Presale Assistant</h2>
             <p class="case-summary" id="caseSummary"></p>
+            <div class="case-award" id="caseAward" hidden></div>
 
             <div class="case-role">
               <span>Моя роль</span>
@@ -172,7 +172,7 @@
               </div>
             </div>
             <div class="media-caption">
-              <span id="caseReference">Live reference</span>
+              <span id="caseReference">Демонстрация проекта</span>
               <strong id="caseYear">2026</strong>
             </div>
             <div class="media-pills" id="mediaPills" aria-label="Медиа проекта"></div>

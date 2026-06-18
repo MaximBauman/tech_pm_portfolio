@@ -23,17 +23,17 @@ const projects = [
       {
         type: "image",
         src: "assets/cases/ai/ai-upload.png",
-        label: "AI Presale Assistant / upload workspace",
+        label: "Загрузка и настройка анализа",
       },
       {
         type: "image",
         src: "assets/cases/ai/ai-processing.png",
-        label: "AI processing overlay",
+        label: "Обработка брифа локальной AI-моделью",
       },
       {
         type: "image",
         src: "assets/cases/ai/ai-results.png",
-        label: "AI audit result and presale score",
+        label: "Результаты аудита и оценка брифа",
       },
     ],
   },
@@ -61,22 +61,22 @@ const projects = [
       {
         type: "image",
         src: "assets/cases/crm/crm-dashboard.png",
-        label: "Sales Flow dashboard",
+        label: "Главный экран Sales Flow",
       },
       {
         type: "image",
         src: "assets/cases/crm/crm-workspace.png",
-        label: "Client funnel workspace",
+        label: "Рабочее пространство клиентской воронки",
       },
       {
         type: "image",
         src: "assets/cases/crm/crm-all-analytics.png",
-        label: "Global analytics",
+        label: "Сводная аналитика",
       },
       {
         type: "image",
         src: "assets/cases/crm/crm-promo-stats.png",
-        label: "Promo analytics",
+        label: "Аналитика проактива",
       },
     ],
   },
@@ -93,20 +93,14 @@ const projects = [
     role:
       "Проектирование internal-сервиса, который заменяет ручной расчёт digital-проектов в таблицах и помогает стандартизировать оценку.",
     summary:
-      "Внутренний сервис для расчёта стоимости digital-проектов с ролями, структурой работ и подготовкой оценки для presale. Скрин заменён безопасным AI-placeholder из-за коммерческой информации.",
+      "Внутренний сервис для расчёта стоимости digital-проектов с ролями, структурой работ и подготовкой оценки для presale. Материалы проекта не публикуются из-за коммерческой информации.",
     highlights: [
       "Перевёл ручной табличный процесс в продуктовую логику с ролями и контролируемой структурой.",
       "Сервис помогает быстрее собирать сметы и уменьшает риск ошибок на этапе presale.",
       "Рабочий интерфейс и логика разработаны с использованием Codex.",
     ],
     stack: [".NET 8", "Postgres", "Bootstrap", "HTML", "CSS", "JavaScript", "Codex"],
-    media: [
-      {
-        type: "image",
-        src: "assets/cases/ai/ai-processing.png",
-        label: "Internal tool placeholder",
-      },
-    ],
+    media: [],
   },
   {
     id: "pik",
@@ -127,29 +121,42 @@ const projects = [
       "Контролировал запуск и корректность пользовательских сценариев.",
     ],
     stack: ["REST API", "JSON", "Web API", "JavaScript", "Jira", "Confluence", "Яндекс.Метрика"],
-    media: [{ type: "video", src: "assets/screencasts/pikmegamarket.mp4", label: "Screencast reference" }],
+    media: [{ type: "video", src: "assets/screencasts/pikmegamarket.mp4", label: "Скринкаст проекта" }],
   },
   {
     id: "vich",
-    title: "Ваше дело: болезнь без лица",
-    shortTitle: "ВИЧ",
-    client: "Минздрав",
-    type: "Social impact",
+    title: "Болезнь без лица",
+    shortTitle: "Без лица",
+    client: "Ваше дело / Минздрав",
+    type: "Интерактивный спецпроект",
     year: "2025",
     color: "#e84f3d",
     rgb: "232, 79, 61",
-    icon: "assets/icons/TakZdorovoFav.svg",
+    icon: "assets/icons/bezlica.png",
+    awards: [
+      {
+        title: "Лучший социальный проект",
+        result: "Шорт-лист премии НПБК «Эффективность 2026»",
+      },
+      {
+        title: "Public Vote",
+        result: "Спецноминация Silver Mercury 2026",
+      },
+      {
+        title: "Бронзовая премия",
+        result: "Silver Mercury 2026",
+      },
+    ],
     role:
-      "Технический менеджер проекта: ТЗ, подрядчики, интерактивные сценарии, QA, аналитика и запуск.",
+      "Технический менеджмент: декомпозиция интерактивной механики, ТЗ, подрядчики, QA, аналитика и запуск.",
     summary:
-      "Интерактивный образовательный web-проект о ВИЧ-инфекции. Победитель Silver Mercury в Pure Audience и бронзовый призёр среди социально значимых проектов.",
+      "Интерактивный образовательный web-проект о ВИЧ-инфекции, который показывает болезнь через личные истории и вовлекающий цифровой опыт.",
     highlights: [
-      "Декомпозировал интерактивную механику и контентную структуру в задачи для разработки.",
-      "Синхронизировал клиентские правки, ограничения и сроки запуска.",
-      "Контролировал качество пользовательского пути и готовность проекта к публикации.",
+      "Перевёл творческую концепцию и нелинейный сценарий в технические состояния.",
+      "Синхронизировал клиента, дизайн, контент и разработку к фиксированному запуску.",
     ],
     stack: ["Figma", "HTML", "CSS", "JavaScript", "Analytics", "QA", "Jira"],
-    media: [{ type: "video", src: "assets/screencasts/TakZdorovo.mp4", label: "Related social project reference" }],
+    media: [{ type: "video", src: "assets/screencasts/bezlica.m4v", label: "Скринкаст проекта" }],
   },
   {
     id: "kids-rules",
@@ -213,7 +220,7 @@ const projects = [
       "Синхронизировал креатив, разработку и клиентские ожидания.",
     ],
     stack: ["Three.js", "JavaScript", "Game loop", "Responsive", "QA", "Jira"],
-    media: [{ type: "video", src: "assets/screencasts/FonCrossyRoad.mp4", label: "Screencast reference" }],
+    media: [{ type: "video", src: "assets/screencasts/FonCrossyRoad.mp4", label: "Скринкаст игры" }],
   },
   {
     id: "territory",
@@ -234,7 +241,7 @@ const projects = [
       "Контролировал запуск с учётом UX, QA и клиентских ограничений.",
     ],
     stack: ["Real-time", "WebSocket logic", "JavaScript", "QA", "Risk management", "Jira"],
-    media: [{ type: "video", src: "assets/screencasts/fonSnake.mp4", label: "Screencast reference" }],
+    media: [{ type: "video", src: "assets/screencasts/fonSnake.mp4", label: "Скринкаст игры" }],
   },
   {
     id: "insurance",
@@ -255,7 +262,7 @@ const projects = [
       "Следил за корректностью аналитики и готовностью к запуску.",
     ],
     stack: ["JavaScript", "Forms", "Backend", "Analytics", "Jira", "QA"],
-    media: [{ type: "video", src: "assets/screencasts/sbskasko.mp4", label: "Screencast reference" }],
+    media: [{ type: "video", src: "assets/screencasts/sbskasko.mp4", label: "Скринкаст проекта" }],
   },
   {
     id: "donor",
@@ -276,23 +283,27 @@ const projects = [
       "Вёл техническую коммуникацию с командой и клиентом.",
     ],
     stack: ["HTML", "CSS", "JavaScript", "Animation", "Figma", "QA"],
-    media: [{ type: "video", src: "assets/screencasts/Donorstvo.mp4", label: "Screencast reference" }],
+    media: [{ type: "video", src: "assets/screencasts/Donorstvo.mp4", label: "Скринкаст проекта" }],
   },
 ];
 
 const state = {
   activeId: projects[0].id,
+  activeIndex: 0,
   activeMediaIndex: 0,
-  flowPaused: false,
+  autoplayPaused: false,
+  autoplayTimer: null,
 };
 
 const root = document.documentElement;
 const projectNodes = document.querySelector("#projectNodes");
-const shuffleButton = document.querySelector("#shuffleButton");
+const projectShowcase = document.querySelector("#projectShowcase");
+const projectIndex = document.querySelector("#projectIndex");
+const prevButton = document.querySelector("#prevButton");
+const nextButton = document.querySelector("#nextButton");
 const pulseButton = document.querySelector("#pulseButton");
-const previewIndex = document.querySelector("#previewIndex");
-const previewTitle = document.querySelector("#previewTitle");
-const previewMeta = document.querySelector("#previewMeta");
+const showcaseCounter = document.querySelector("#showcaseCounter");
+const showcaseProgress = document.querySelector("#showcaseProgress");
 const caseView = document.querySelector("#caseView");
 const mediaFrame = document.querySelector("#mediaFrame");
 const caseVideo = document.querySelector("#caseVideo");
@@ -301,6 +312,7 @@ const fallbackVisual = document.querySelector("#fallbackVisual");
 const backButton = document.querySelector("#backButton");
 const caseNav = document.querySelector("#caseNav");
 const mediaPills = document.querySelector("#mediaPills");
+const caseAward = document.querySelector("#caseAward");
 
 function setAccent(project) {
   root.style.setProperty("--accent", project.color);
@@ -315,49 +327,88 @@ function projectIconMarkup(project) {
   return `<span class="project-letter">${project.iconText || project.shortTitle.slice(0, 2)}</span>`;
 }
 
-function projectButtonMarkup(project, index, copyIndex) {
+function showcaseMediaMarkup(project) {
+  const item = project.media?.[0];
+
+  if (item?.type === "image") {
+    return `<img src="${item.src}" alt="" draggable="false" />`;
+  }
+
+  if (item?.type === "video") {
+    return `<video src="${item.src}" muted loop playsinline preload="metadata"></video>`;
+  }
+
   return `
-    <button
-      class="project-node"
-      type="button"
-      data-project="${project.id}"
-      data-copy="${copyIndex}"
-      style="--node-rgb: ${project.rgb}"
-      aria-label="Открыть проект ${project.title}"
-    >
-      <span class="project-icon">${projectIconMarkup(project)}</span>
-      <span>
-        <span class="node-kicker">${String(index + 1).padStart(2, "0")} / ${project.client}</span>
-        <span class="node-title">${project.shortTitle}</span>
-        <span class="node-type">${project.type}</span>
+    <div class="showcase-placeholder" aria-hidden="true">
+      <span>${project.iconText || project.shortTitle.slice(0, 2)}</span>
+      <strong>${project.type}</strong>
+    </div>
+  `;
+}
+
+function projectSlideMarkup(project, index) {
+  const awardMarkup = project.awards?.length
+    ? `
+      <span class="showcase-award">
+        <span>${project.awards.length} награды</span>
+        <strong>Silver Mercury · НПБК</strong>
       </span>
-    </button>
+    `
+    : "";
+
+  return `
+    <article
+      class="project-slide${index === 0 ? " is-active" : ""}"
+      data-project="${project.id}"
+      style="--node-rgb: ${project.rgb}"
+    >
+      <button class="project-slide-button" type="button" aria-label="Открыть проект ${project.title}">
+        <span class="showcase-copy">
+          <span class="showcase-meta">
+            <span>${String(index + 1).padStart(2, "0")}</span>
+            <span>${project.client}</span>
+          </span>
+          <span class="showcase-type">${project.type}</span>
+          <strong class="showcase-title">${project.title}</strong>
+          ${awardMarkup}
+          <span class="showcase-cta">Открыть кейс <span aria-hidden="true">↗</span></span>
+        </span>
+        <span class="showcase-media">
+          ${showcaseMediaMarkup(project)}
+          <span class="showcase-media-tint" aria-hidden="true"></span>
+        </span>
+      </button>
+    </article>
   `;
 }
 
 function renderProjectNodes() {
-  const rows = [
-    { items: projects, copy: 0 },
-    { items: [...projects].reverse(), copy: 1 },
-  ];
-
-  projectNodes.innerHTML = rows
-    .map(({ items, copy }, rowIndex) => {
-      const doubledItems = [...items, ...items];
-      return `
-        <div class="marquee-row marquee-row-${rowIndex + 1}">
-          ${doubledItems
-            .map((project, index) => projectButtonMarkup(project, projects.indexOf(project), `${copy}-${index}`))
-            .join("")}
-        </div>
-      `;
-    })
+  projectNodes.innerHTML = projects
+    .map((project, index) => projectSlideMarkup(project, index))
     .join("");
 
-  projectNodes.querySelectorAll(".project-node").forEach((node) => {
-    node.addEventListener("pointerenter", () => selectPreview(node.dataset.project));
-    node.addEventListener("focus", () => selectPreview(node.dataset.project));
+  projectIndex.innerHTML = projects
+    .map(
+      (project) => `
+        <button
+          type="button"
+          data-project="${project.id}"
+          class="${project.id === projects[0].id ? "is-active" : ""}"
+          aria-label="Выбрать проект ${project.title}"
+        ><span aria-hidden="true"></span></button>
+      `,
+    )
+    .join("");
+
+  projectNodes.querySelectorAll(".project-slide").forEach((node) => {
     node.addEventListener("click", () => openCase(node.dataset.project, node));
+  });
+
+  projectIndex.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const index = projects.findIndex((project) => project.id === button.dataset.project);
+      setActiveProject(index, index < state.activeIndex ? "backward" : "forward");
+    });
   });
 }
 
@@ -382,23 +433,62 @@ function getProject(id) {
   return projects.find((project) => project.id === id) || projects[0];
 }
 
-function selectPreview(id) {
-  const project = getProject(id);
-  const index = projects.findIndex((item) => item.id === project.id);
+function resetShowcaseProgress() {
+  showcaseProgress.classList.remove("is-running");
+  void showcaseProgress.offsetWidth;
+  if (!state.autoplayPaused) {
+    showcaseProgress.classList.add("is-running");
+  }
+}
+
+function restartAutoplay() {
+  window.clearTimeout(state.autoplayTimer);
+  resetShowcaseProgress();
+
+  if (!state.autoplayPaused) {
+    state.autoplayTimer = window.setTimeout(() => {
+      setActiveProject(state.activeIndex + 1, "forward");
+    }, 6500);
+  }
+}
+
+function setActiveProject(index, direction = "forward") {
+  const normalizedIndex = (index + projects.length) % projects.length;
+  const project = projects[normalizedIndex];
+  state.activeIndex = normalizedIndex;
   state.activeId = project.id;
   setAccent(project);
-  previewIndex.textContent = String(index + 1).padStart(2, "0");
-  previewTitle.textContent = project.title;
-  previewMeta.textContent = `${project.client} / ${project.type}`;
+  projectShowcase.classList.toggle("is-backward", direction === "backward");
 
-  projectNodes.querySelectorAll(".project-node").forEach((node) => {
-    node.classList.toggle("is-active", node.dataset.project === project.id);
+  projectNodes.querySelectorAll(".project-slide").forEach((slide, slideIndex) => {
+    const isActive = slideIndex === normalizedIndex;
+    slide.classList.toggle("is-active", isActive);
+    const video = slide.querySelector("video");
+    if (video) {
+      if (isActive) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    }
   });
+
+  projectIndex.querySelectorAll("button").forEach((button, buttonIndex) => {
+    const isActive = buttonIndex === normalizedIndex;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-current", isActive ? "true" : "false");
+  });
+
+  showcaseCounter.textContent =
+    `${String(normalizedIndex + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
+  restartAutoplay();
 }
 
 function openCase(id, originElement) {
   const project = getProject(id);
   const index = projects.findIndex((item) => item.id === project.id);
+  window.clearTimeout(state.autoplayTimer);
+  showcaseProgress.classList.remove("is-running");
   state.activeId = project.id;
   state.activeMediaIndex = 0;
   setAccent(project);
@@ -417,6 +507,33 @@ function openCase(id, originElement) {
   document.querySelector("#caseSummary").textContent = project.summary;
   document.querySelector("#caseRole").textContent = project.role;
   document.querySelector("#caseYear").textContent = project.year;
+  if (project.awards?.length) {
+    caseView.classList.add("has-awards");
+    caseAward.hidden = false;
+    caseAward.innerHTML = `
+      <div class="case-award-heading">
+        <span>Награды</span>
+        <strong>${project.awards.length} достижения в 2026 году</strong>
+      </div>
+      <ol class="case-award-list">
+        ${project.awards
+          .map(
+            (award, awardIndex) => `
+              <li>
+                <span>${String(awardIndex + 1).padStart(2, "0")}</span>
+                <strong>${award.title}</strong>
+                <small>${award.result}</small>
+              </li>
+            `,
+          )
+          .join("")}
+      </ol>
+    `;
+  } else {
+    caseView.classList.remove("has-awards");
+    caseAward.hidden = true;
+    caseAward.innerHTML = "";
+  }
   document.querySelector("#caseHighlights").innerHTML = project.highlights
     .map((item) => `<li>${item}</li>`)
     .join("");
@@ -446,7 +563,7 @@ function renderMedia(project, mediaIndex) {
     caseImage.removeAttribute("src");
     caseImage.style.display = "none";
     fallbackVisual.classList.add("is-visible");
-    document.querySelector("#caseReference").textContent = "Protected internal reference";
+    document.querySelector("#caseReference").textContent = "Внутренние материалы не публикуются";
     mediaPills.innerHTML = "";
     return;
   }
@@ -505,88 +622,39 @@ function closeCase() {
   document.body.classList.remove("case-open");
   caseView.setAttribute("aria-hidden", "true");
   caseVideo.pause();
+  projectNodes.querySelector(".project-slide.is-active video")?.play().catch(() => {});
+  restartAutoplay();
 }
 
-function openRandomProject() {
-  const next = projects[Math.floor(Math.random() * projects.length)];
-  const node = projectNodes.querySelector(`.project-node[data-project="${next.id}"]`);
-  selectPreview(next.id);
-  openCase(next.id, node);
+function showPreviousProject() {
+  setActiveProject(state.activeIndex - 1, "backward");
 }
 
-function toggleFlow() {
-  state.flowPaused = !state.flowPaused;
-  document.body.classList.toggle("flow-paused", state.flowPaused);
-  pulseButton.setAttribute("aria-pressed", String(state.flowPaused));
-  pulseButton.textContent = state.flowPaused ? "Resume" : "Pause";
+function showNextProject() {
+  setActiveProject(state.activeIndex + 1, "forward");
 }
 
-function setupAmbientCanvas() {
-  const canvas = document.querySelector("#ambientCanvas");
-  const context = canvas.getContext("2d");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let width = 0;
-  let height = 0;
-  let points = [];
-
-  function resize() {
-    const ratio = window.devicePixelRatio || 1;
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = Math.floor(width * ratio);
-    canvas.height = Math.floor(height * ratio);
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
-    context.setTransform(ratio, 0, 0, ratio, 0, 0);
-    points = Array.from({ length: Math.max(28, Math.min(68, Math.round((width * height) / 26000))) }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.22,
-      vy: (Math.random() - 0.5) * 0.22,
-      r: 1 + Math.random() * 1.4,
-    }));
-  }
-
-  function draw() {
-    context.clearRect(0, 0, width, height);
-    points.forEach((point, index) => {
-      if (!reduceMotion) {
-        point.x += point.vx;
-        point.y += point.vy;
-      }
-      if (point.x < -20) point.x = width + 20;
-      if (point.x > width + 20) point.x = -20;
-      if (point.y < -20) point.y = height + 20;
-      if (point.y > height + 20) point.y = -20;
-
-      context.fillStyle = "rgba(22, 24, 29, 0.18)";
-      context.beginPath();
-      context.arc(point.x, point.y, point.r, 0, Math.PI * 2);
-      context.fill();
-
-      for (let i = index + 1; i < points.length; i += 1) {
-        const other = points[i];
-        const distance = Math.hypot(point.x - other.x, point.y - other.y);
-        if (distance < 112) {
-          context.strokeStyle = `rgba(22, 24, 29, ${0.06 * (1 - distance / 112)})`;
-          context.lineWidth = 1;
-          context.beginPath();
-          context.moveTo(point.x, point.y);
-          context.lineTo(other.x, other.y);
-          context.stroke();
-        }
-      }
-    });
-    requestAnimationFrame(draw);
-  }
-
-  window.addEventListener("resize", resize);
-  resize();
-  draw();
+function toggleAutoplay() {
+  state.autoplayPaused = !state.autoplayPaused;
+  projectShowcase.classList.toggle("is-paused", state.autoplayPaused);
+  pulseButton.setAttribute("aria-pressed", String(state.autoplayPaused));
+  const label = state.autoplayPaused
+    ? "Запустить автопереключение"
+    : "Приостановить автопереключение";
+  pulseButton.setAttribute("aria-label", label);
+  pulseButton.setAttribute("title", label);
+  pulseButton.innerHTML = `
+    <span
+      class="media-control-icon ${state.autoplayPaused ? "is-play" : "is-pause"}"
+      aria-hidden="true"
+    ></span>
+  `;
+  restartAutoplay();
 }
 
-shuffleButton.addEventListener("click", openRandomProject);
-pulseButton.addEventListener("click", toggleFlow);
+prevButton.addEventListener("click", showPreviousProject);
+nextButton.addEventListener("click", showNextProject);
+pulseButton.addEventListener("click", toggleAutoplay);
 backButton.addEventListener("click", closeCase);
 
 mediaPills.addEventListener("click", (event) => {
@@ -601,12 +669,13 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && document.body.classList.contains("case-open")) {
     closeCase();
   }
-  if (event.key.toLowerCase() === "p" && !document.body.classList.contains("case-open")) {
-    toggleFlow();
+  if (!document.body.classList.contains("case-open")) {
+    if (event.key === "ArrowLeft") showPreviousProject();
+    if (event.key === "ArrowRight") showNextProject();
+    if (event.key.toLowerCase() === "p") toggleAutoplay();
   }
 });
 
 renderProjectNodes();
 renderCaseNav();
-selectPreview(projects[0].id);
-setupAmbientCanvas();
+setActiveProject(0);
