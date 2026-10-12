@@ -510,21 +510,15 @@ const state = {
   activeMediaIndex: 0,
   autoplayPaused: false,
   autoplayTimer: null,
-<<<<<<< HEAD
   lastFocusedElement: null,
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
 };
 
 const root = document.documentElement;
 const projectNodes = document.querySelector("#projectNodes");
 const projectShowcase = document.querySelector("#projectShowcase");
 const projectIndex = document.querySelector("#projectIndex");
-<<<<<<< HEAD
 const projectGroupsNode = document.querySelector("#projectGroups");
 const homeView = document.querySelector("#homeView");
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
 const prevButton = document.querySelector("#prevButton");
 const nextButton = document.querySelector("#nextButton");
 const pulseButton = document.querySelector("#pulseButton");
@@ -553,7 +547,6 @@ function projectIconMarkup(project) {
   return `<span class="project-letter">${project.iconText || project.shortTitle.slice(0, 2)}</span>`;
 }
 
-<<<<<<< HEAD
 function getGroup(category) {
   return projectGroups.find((group) => group.id === category) || projectGroups[0];
 }
@@ -602,20 +595,6 @@ function showcaseMediaMarkup(project) {
   }
 
   return `
-=======
-function showcaseMediaMarkup(project) {
-  const item = project.media?.[0];
-
-  if (item?.type === "image") {
-    return `<img src="${item.src}" alt="" draggable="false" />`;
-  }
-
-  if (item?.type === "video") {
-    return `<video src="${item.src}" muted loop playsinline preload="metadata"></video>`;
-  }
-
-  return `
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
     <div class="showcase-placeholder" aria-hidden="true">
       <span>${project.iconText || project.shortTitle.slice(0, 2)}</span>
       <strong>${project.type}</strong>
@@ -645,7 +624,6 @@ function projectSlideMarkup(project, index) {
             <span>${String(index + 1).padStart(2, "0")}</span>
             <span>${project.client}</span>
           </span>
-<<<<<<< HEAD
           <span class="showcase-group">${getGroup(project.category).label}</span>
           <span class="showcase-type">${project.type}</span>
           <strong class="showcase-title${project.title.length > 34 ? " is-long" : ""}">${project.title}</strong>
@@ -654,12 +632,6 @@ function projectSlideMarkup(project, index) {
             <span class="showcase-status-label">${project.status}</span>
             <span class="showcase-cta">Открыть кейс <span aria-hidden="true">↗</span></span>
           </span>
-=======
-          <span class="showcase-type">${project.type}</span>
-          <strong class="showcase-title">${project.title}</strong>
-          ${awardMarkup}
-          <span class="showcase-cta">Открыть кейс <span aria-hidden="true">↗</span></span>
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
         </span>
         <span class="showcase-media">
           ${showcaseMediaMarkup(project)}
@@ -673,7 +645,6 @@ function projectSlideMarkup(project, index) {
 function renderProjectNodes() {
   projectNodes.innerHTML = projects
     .map((project, index) => projectSlideMarkup(project, index))
-<<<<<<< HEAD
     .join("");
 
   projectGroupsNode.innerHTML = projectGroups
@@ -685,8 +656,6 @@ function renderProjectNodes() {
         </button>
       `;
     })
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
     .join("");
 
   projectIndex.innerHTML = projects
@@ -712,7 +681,6 @@ function renderProjectNodes() {
       setActiveProject(index, index < state.activeIndex ? "backward" : "forward");
     });
   });
-<<<<<<< HEAD
 
   projectGroupsNode.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
@@ -724,8 +692,6 @@ function renderProjectNodes() {
       }
     });
   });
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
 }
 
 function renderCaseNav() {
@@ -795,15 +761,12 @@ function setActiveProject(index, direction = "forward") {
     button.setAttribute("aria-current", isActive ? "true" : "false");
   });
 
-<<<<<<< HEAD
   projectGroupsNode.querySelectorAll("button").forEach((button) => {
     const isActive = button.dataset.group === project.category;
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-current", isActive ? "true" : "false");
   });
 
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
   showcaseCounter.textContent =
     `${String(normalizedIndex + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
   restartAutoplay();
@@ -812,10 +775,7 @@ function setActiveProject(index, direction = "forward") {
 function openCase(id, originElement) {
   const project = getProject(id);
   const index = projects.findIndex((item) => item.id === project.id);
-<<<<<<< HEAD
   const isCaseAlreadyOpen = document.body.classList.contains("case-open");
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
   window.clearTimeout(state.autoplayTimer);
   showcaseProgress.classList.remove("is-running");
   state.activeId = project.id;
@@ -905,13 +865,9 @@ function renderMedia(project, mediaIndex) {
       ? estimateFlowMarkup()
       : `<div class="private-visual"><span>${project.iconText || project.shortTitle.slice(0, 2)}</span><strong>Внутренние материалы</strong><small>Не публикуются</small></div>`;
     fallbackVisual.classList.add("is-visible");
-<<<<<<< HEAD
     document.querySelector("#caseReference").textContent = project.visual === "estimate-flow"
       ? "Схема процесса подготовки сметы"
       : "Внутренние материалы не публикуются";
-=======
-    document.querySelector("#caseReference").textContent = "Внутренние материалы не публикуются";
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
     mediaPills.innerHTML = "";
     return;
   }
@@ -973,10 +929,7 @@ function closeCase() {
   caseVideo.pause();
   projectNodes.querySelector(".project-slide.is-active video")?.play().catch(() => {});
   restartAutoplay();
-<<<<<<< HEAD
   state.lastFocusedElement?.focus();
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
 }
 
 function showPreviousProject() {
@@ -1022,7 +975,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && document.body.classList.contains("case-open")) {
     closeCase();
   }
-<<<<<<< HEAD
   if (document.body.classList.contains("case-open") && event.key === "ArrowLeft") {
     const currentIndex = projects.findIndex((project) => project.id === state.activeId);
     openCase(projects[(currentIndex - 1 + projects.length) % projects.length].id);
@@ -1031,8 +983,6 @@ document.addEventListener("keydown", (event) => {
     const currentIndex = projects.findIndex((project) => project.id === state.activeId);
     openCase(projects[(currentIndex + 1) % projects.length].id);
   }
-=======
->>>>>>> 6ea059848ea9234bc667e9df2f12fb8d77f7a628
   if (!document.body.classList.contains("case-open")) {
     if (event.key === "ArrowLeft") showPreviousProject();
     if (event.key === "ArrowRight") showNextProject();
