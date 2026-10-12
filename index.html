@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Портфолио Максима Баумана: Technical Project Manager, web, API, LLM, Telegram-боты и игровые спецпроекты."
+      content="Портфолио Максима Баумана: управление цифровыми продуктами, автоматизация бизнес-процессов, AI и internal tools."
     />
     <title>Максим Бауман | Technical Project Manager</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <canvas id="ambientCanvas" aria-hidden="true"></canvas>
-
     <main class="site-shell">
       <section class="home-view" id="homeView" aria-label="Главный экран портфолио">
         <aside class="identity-panel">
@@ -25,12 +23,16 @@
           </header>
 
           <div class="hero-copy">
-            <p class="eyebrow">Technical Project Manager</p>
+            <p class="eyebrow">Product &amp; Project Management / Business Automation / AI</p>
             <h1>Максим Бауман</h1>
             <p class="lead">
-              Веду digital-продукты от presale и архитектуры до запуска: web-сервисы,
-              AI-инструменты, CRM, API-интеграции, Telegram-боты и игровые спецпроекты.
+              Проектирую цифровые продукты и автоматизирую бизнес-процессы: от анализа задачи
+              и проверки MVP до организации реализации и внедрения.
             </p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#projects-title">Смотреть кейсы</a>
+              <a class="text-action" href="https://t.me/max_bauman" target="_blank" rel="noreferrer">Обсудить задачу <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
 
           <div class="signal-grid" aria-label="Ключевые факты">
@@ -43,8 +45,8 @@
               <span>техническое управление</span>
             </div>
             <div>
-              <strong>Codex-built</strong>
-              <span>AI-сервисы, CRM, internal tools</span>
+              <strong>От задачи до MVP</strong>
+              <span>логика, сценарии, прототип и delivery</span>
             </div>
           </div>
 
@@ -55,18 +57,23 @@
             </div>
             <div class="focus-list">
               <article>
-                <h3>Presale</h3>
-                <p>Оценка реализуемости, рисков, сроков, стоимости и нужного состава команды.</p>
+                <h3>Понять задачу</h3>
+                <p>Разобрать процесс, требования, ограничения и возможности автоматизации.</p>
               </article>
               <article>
-                <h3>Delivery</h3>
-                <p>ТЗ, постановка задач, подрядчики, контроль качества, релиз и аналитика.</p>
+                <h3>Спроектировать</h3>
+                <p>Собрать логику продукта, пользовательские сценарии, требования и MVP.</p>
               </article>
               <article>
-                <h3>AI / automation</h3>
-                <p>LLM-интеграции, Codex-разработка, внутренние сервисы и автоматизация процессов.</p>
+                <h3>Довести до работы</h3>
+                <p>Организовать разработку, проверить результат и развивать его по обратной связи.</p>
               </article>
             </div>
+          </section>
+
+          <section class="achievement-strip" aria-label="Подтверждённые достижения">
+            <span>2026 · Подтверждённые достижения</span>
+            <p><strong>3 награды и номинации</strong> проекта «Болезнь без лица» на Silver Mercury и НПБК «Эффективность».</p>
           </section>
 
           <section class="profile-section" aria-labelledby="skills-title">
@@ -75,11 +82,9 @@
               <h2 id="skills-title">Стек</h2>
             </div>
             <div class="skill-cloud">
-              <span>Agile</span><span>Kanban</span><span>Jira</span><span>Confluence</span>
-              <span>REST API</span><span>JSON</span><span>Telegram API</span><span>LLM</span>
-              <span>Python</span><span>Codex</span><span>Figma</span><span>JavaScript</span>
-              <span>.NET 8</span><span>Bootstrap</span><span>Postgres</span>
-              <span>Яндекс.Метрика</span><span>Apps Script</span>
+              <span>Product discovery</span><span>Presale</span><span>Delivery</span>
+              <span>Требования</span><span>Прототипирование</span><span>API</span>
+              <span>AI / LLM</span><span>Аналитика</span><span>QA</span>
             </div>
           </section>
         </aside>
@@ -87,36 +92,40 @@
         <section class="project-space" aria-labelledby="projects-title">
           <header class="space-header">
             <div>
-              <p class="eyebrow">Project stream</p>
-              <h2 id="projects-title">Кейсы уходят под профиль и возвращаются</h2>
+              <p class="space-kicker">11 проектов · 4 направления</p>
+              <h2 id="projects-title">Задачи, решения и моя роль</h2>
             </div>
             <div class="space-actions">
-              <button class="control-button" id="shuffleButton" type="button">Random</button>
-              <button class="control-button" id="pulseButton" type="button" aria-pressed="false">
-                Pause
+              <button class="control-button icon-button" id="prevButton" type="button" aria-label="Предыдущий проект">
+                ←
+              </button>
+              <button
+                class="control-button icon-button autoplay-button"
+                id="pulseButton"
+                type="button"
+                aria-label="Приостановить автопереключение"
+                aria-pressed="false"
+                title="Приостановить автопереключение"
+              >
+                <span class="media-control-icon is-pause" aria-hidden="true"></span>
+              </button>
+              <button class="control-button icon-button" id="nextButton" type="button" aria-label="Следующий проект">
+                →
               </button>
             </div>
           </header>
 
-          <div class="project-cloud" id="projectCloud">
-            <div class="radar" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
-            </div>
-            <div class="launch-core" aria-hidden="true">
-              <strong>flow</strong>
-              <span>click case</span>
-            </div>
-            <div class="project-nodes" id="projectNodes"></div>
-          </div>
+          <nav class="project-groups" id="projectGroups" aria-label="Направления проектов"></nav>
 
-          <footer class="preview-strip" aria-label="Предпросмотр выбранного проекта">
-            <div class="preview-index" id="previewIndex">01</div>
-            <div>
-              <strong id="previewTitle">AI Presale Assistant</strong>
-              <span id="previewMeta">Internal / AI-сервис</span>
+          <div class="project-showcase" id="projectShowcase">
+            <div class="showcase-status" aria-hidden="true">
+              <span id="showcaseCounter">01 / 11</span>
+              <span>Автопереключение</span>
             </div>
-            <p id="previewHint">Карточки идут потоком. Клик переводит в полноценный кейс.</p>
-          </footer>
+            <div class="showcase-slides" id="projectNodes"></div>
+            <nav class="project-pagination" id="projectIndex" aria-label="Выбор проекта"></nav>
+            <div class="showcase-progress" aria-hidden="true"><span id="showcaseProgress"></span></div>
+          </div>
         </section>
       </section>
 
@@ -124,7 +133,7 @@
         <div class="case-bg" aria-hidden="true"></div>
         <header class="case-topbar">
           <button class="back-button" id="backButton" type="button" aria-label="Вернуться назад">
-            Back
+            Назад
           </button>
           <div class="case-progress">
             <span id="caseCounter">01 / 09</span>
@@ -137,6 +146,18 @@
             <p class="eyebrow" id="caseType">LLM / Presale</p>
             <h2 id="caseTitle">AI Presale Assistant</h2>
             <p class="case-summary" id="caseSummary"></p>
+            <div class="case-award" id="caseAward" hidden></div>
+
+            <dl class="case-brief">
+              <div>
+                <dt>Задача</dt>
+                <dd id="caseProblem"></dd>
+              </div>
+              <div>
+                <dt>Решение</dt>
+                <dd id="caseSolution"></dd>
+              </div>
+            </dl>
 
             <div class="case-role">
               <span>Моя роль</span>
@@ -145,12 +166,25 @@
 
             <div class="case-columns">
               <div>
-                <h3>Что внутри</h3>
+                <h3>Что реализовано</h3>
                 <ul id="caseHighlights"></ul>
               </div>
+              <div class="case-outcome">
+                <h3>Результат</h3>
+                <p id="caseResult"></p>
+                <span class="status-label">Статус</span>
+                <strong id="caseStatus"></strong>
+              </div>
+            </div>
+
+            <div class="case-stack-groups">
               <div>
-                <h3>Стек</h3>
+                <span>Технологии продукта</span>
                 <div class="skill-cloud case-stack" id="caseStack"></div>
+              </div>
+              <div>
+                <span>Инструменты разработки</span>
+                <div class="skill-cloud case-stack" id="caseTools"></div>
               </div>
             </div>
           </section>
@@ -159,20 +193,10 @@
             <div class="media-frame" id="mediaFrame">
               <video id="caseVideo" autoplay muted loop playsinline></video>
               <img id="caseImage" src="" alt="" />
-              <div class="fallback-visual" id="fallbackVisual" aria-hidden="true">
-                <div class="terminal-card">
-                  <span></span><span></span><span></span>
-                  <p>brief.analyze()</p>
-                  <p>risk.map()</p>
-                  <p>concept.generate()</p>
-                </div>
-                <div class="ai-grid">
-                  <span></span><span></span><span></span><span></span><span></span><span></span>
-                </div>
-              </div>
+              <div class="fallback-visual" id="fallbackVisual" aria-hidden="true"></div>
             </div>
             <div class="media-caption">
-              <span id="caseReference">Live reference</span>
+              <span id="caseReference">Демонстрация проекта</span>
               <strong id="caseYear">2026</strong>
             </div>
             <div class="media-pills" id="mediaPills" aria-label="Медиа проекта"></div>
