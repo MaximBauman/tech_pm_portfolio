@@ -609,7 +609,7 @@ h1 {
   width: 100%;
   max-width: 100%;
   color: #fff;
-  font-size: clamp(2.25rem, 5cqi, 4rem);
+  font-size: clamp(1.9rem, 3.2cqi, 2.35rem);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: 0;
@@ -618,7 +618,6 @@ h1 {
 }
 
 .showcase-title.is-long {
-  font-size: clamp(1.85rem, 3.2cqi, 2.35rem);
   line-height: 1.02;
   overflow-wrap: anywhere;
 }
@@ -1717,10 +1716,6 @@ body.case-open .case-view {
   }
 
   .showcase-title {
-    font-size: 2.35rem;
-  }
-
-  .showcase-title.is-long {
     font-size: 2rem;
   }
 
