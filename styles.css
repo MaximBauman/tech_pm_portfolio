@@ -242,6 +242,30 @@ h1 {
   line-height: 1.36;
 }
 
+.career-track {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 9px;
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 2px solid rgb(var(--accent-rgb));
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.3;
+  background: rgba(255, 255, 250, 0.46);
+}
+
+.career-track strong {
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.career-track-arrow {
+  color: rgb(var(--accent-rgb));
+  font-weight: 850;
+}
+
 .achievement-strip {
   display: grid;
   gap: 7px;
@@ -1570,20 +1594,24 @@ body.case-open .case-view {
     order: 3;
   }
 
-  .project-space {
+  .career-track {
     order: 4;
   }
 
-  .profile-section[aria-labelledby="about-title"] {
+  .project-space {
     order: 5;
   }
 
-  .achievement-strip {
+  .profile-section[aria-labelledby="about-title"] {
     order: 6;
   }
 
-  .profile-section[aria-labelledby="skills-title"] {
+  .achievement-strip {
     order: 7;
+  }
+
+  .profile-section[aria-labelledby="skills-title"] {
+    order: 8;
   }
 
   body.case-open .home-view {
