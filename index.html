@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Портфолио Максима Баумана: управление цифровыми продуктами, автоматизация бизнес-процессов, AI и internal tools."
+      content="Портфолио Максима Баумана, Technical Project Manager: digital-продукты, интерактивные проекты, внутренние инструменты и AI-прототипы."
     />
     <title>Максим Бауман | Technical Project Manager</title>
     <link rel="stylesheet" href="styles.css" />
@@ -36,14 +36,15 @@
           </header>
 
           <div class="hero-copy">
-            <p class="eyebrow">Product &amp; Project Management / Business Automation / AI</p>
+            <p class="eyebrow">Technical Project Manager</p>
             <h1>Максим Бауман</h1>
             <p class="lead">
-              Проектирую цифровые продукты и автоматизирую бизнес-процессы: от анализа задачи
-              и проверки MVP до организации реализации и внедрения.
+              Веду техническую реализацию digital-проектов и создаю внутренние инструменты:
+              от presale, требований и MVP до разработки, QA и запуска.
             </p>
             <div class="hero-actions">
               <a class="primary-action" href="#projects-title">Смотреть кейсы</a>
+              <a class="text-action" href="mailto:m.bauman.x@gmail.com?subject=Запрос%20резюме">Запросить резюме</a>
               <a class="text-action" href="https://t.me/max_bauman" target="_blank" rel="noreferrer">Обсудить задачу <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -95,9 +96,9 @@
               <h2 id="skills-title">Стек</h2>
             </div>
             <div class="skill-cloud">
-              <span>Product discovery</span><span>Presale</span><span>Delivery</span>
-              <span>Требования</span><span>Прототипирование</span><span>API</span>
-              <span>AI / LLM</span><span>Аналитика</span><span>QA</span>
+              <span>Digital / Web</span><span>Интерактив</span><span>Browser games</span>
+              <span>API-интеграции</span><span>Автоматизация</span><span>Internal tools</span>
+              <span>AI-прототипы</span><span>Требования</span><span>QA</span>
             </div>
           </section>
         </aside>
@@ -105,7 +106,7 @@
         <section class="project-space" aria-labelledby="projects-title">
           <header class="space-header">
             <div>
-              <p class="space-kicker">11 проектов · 4 направления</p>
+              <p class="space-kicker">14 проектов · 5 направлений</p>
               <h2 id="projects-title">Задачи, решения и моя роль</h2>
             </div>
             <div class="space-actions">
@@ -132,7 +133,7 @@
 
           <div class="project-showcase" id="projectShowcase">
             <div class="showcase-status" aria-hidden="true">
-              <span id="showcaseCounter">01 / 11</span>
+              <span id="showcaseCounter">01 / 14</span>
               <span>Автопереключение</span>
             </div>
             <div class="showcase-slides" id="projectNodes"></div>
@@ -177,29 +178,31 @@
               <p id="caseRole"></p>
             </div>
 
-            <div class="case-columns">
-              <div>
-                <h3>Что реализовано</h3>
-                <ul id="caseHighlights"></ul>
-              </div>
-              <div class="case-outcome">
-                <h3>Результат</h3>
-                <p id="caseResult"></p>
-                <span class="status-label">Статус</span>
-                <strong id="caseStatus"></strong>
-              </div>
+            <div class="case-outcome case-outcome-primary">
+              <h3>Статус и результат</h3>
+              <strong id="caseStatus"></strong>
+              <p id="caseResult"></p>
             </div>
 
-            <div class="case-stack-groups">
-              <div>
-                <span>Технологии продукта</span>
-                <div class="skill-cloud case-stack" id="caseStack"></div>
+            <details class="case-details">
+              <summary>Детали реализации и стек</summary>
+              <div class="case-details-content">
+                <div>
+                  <h3>Что реализовано</h3>
+                  <ul id="caseHighlights"></ul>
+                </div>
+                <div class="case-stack-groups">
+                  <div>
+                    <span>Технологии продукта</span>
+                    <div class="skill-cloud case-stack" id="caseStack"></div>
+                  </div>
+                  <div>
+                    <span>Инструменты и процессы</span>
+                    <div class="skill-cloud case-stack" id="caseTools"></div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <span>Инструменты разработки</span>
-                <div class="skill-cloud case-stack" id="caseTools"></div>
-              </div>
-            </div>
+            </details>
           </section>
 
           <section class="case-media" aria-label="Видео проекта">

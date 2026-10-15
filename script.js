@@ -1,5 +1,79 @@
 const projects = [
   {
+    id: "sales-workspace",
+    title: "Рабочая платформа отдела продаж",
+    shortTitle: "Sales Workspace",
+    client: "Внутренний продукт",
+    type: "Internal product / Sales enablement",
+    year: "2026",
+    color: "#8f6cff",
+    rgb: "143, 108, 255",
+    iconText: "WS",
+    role: "Самостоятельное проектирование структуры продукта, модулей, пользовательских сценариев, интерфейсов и логики первой версии.",
+    summary: "Единое рабочее пространство для обучения и ежедневной работы отдела продаж: от материалов и статусов команды до каталога и подготовки коммерческих предложений.",
+    highlights: [
+      "Академия с курсами, заданиями, библиотекой и внутренней валютой.",
+      "Рабочие статусы сотрудников и игровая карта активности команды.",
+      "Каталог мебели, профили поставщиков и подготовка структуры данных.",
+      "Конструктор коммерческих предложений и подбор товаров по параметрам запроса.",
+    ],
+    stack: [".NET 8", "PostgreSQL", "Vue SPA", "HTML", "CSS", "JavaScript"],
+    media: [
+      {
+        type: "image",
+        src: "assets/cases/sales-workspace/workspace.png",
+        label: "Обзор единого рабочего пространства",
+      },
+      { type: "image", src: "assets/cases/sales-workspace/statuses.png", label: "Выбор рабочего статуса" },
+      {
+        type: "image",
+        src: "assets/cases/sales-workspace/team-map.png",
+        label: "Карта активности команды",
+      },
+    ],
+  },
+  {
+    id: "national-education",
+    title: "Сайт «Национальное образование»",
+    shortTitle: "Нацобразование",
+    client: "Национальное образование",
+    type: "Corporate website / EdTech",
+    year: "2025",
+    color: "#0878bd",
+    rgb: "8, 120, 189",
+    iconText: "НО",
+    role: "Участвовал в создании сайта поставщика школьного оборудования и решений для умных классов. Точную зону ответственности предстоит уточнить.",
+    summary: "Корпоративный сайт, который объединяет товарный каталог, готовые комплекты классов, реализованные проекты и сценарии получения заявки.",
+    highlights: [
+      "Каталог оборудования и категории по учебным предметам.",
+      "Готовые классы и комплексные решения для школ.",
+      "Реализованные проекты и этапы работы.",
+      "Формы заявки и контакты для перехода к обсуждению проекта.",
+    ],
+    stack: ["Web", "Responsive", "Catalog", "Forms"],
+    media: [
+      { type: "image", src: "assets/cases/national-education/hero.png", label: "Главная страница и позиционирование" },
+      { type: "image", src: "assets/cases/national-education/classes.png", label: "Галерея готовых классов" },
+      { type: "image", src: "assets/cases/national-education/projects.png", label: "Проекты, направления и факты о компании" },
+    ],
+  },
+  {
+    id: "school-sport-portal",
+    title: "Портал школ и спорта",
+    shortTitle: "Школы и спорт",
+    client: "Presale-проработка",
+    type: "Консультация / Service design",
+    year: "2026",
+    color: "#e0a228",
+    rgb: "224, 162, 40",
+    iconText: "ПС",
+    role: "Консультация по составу платформы, пользовательским сценариям и первичным требованиям.",
+    summary: "Проработка возможной структуры регионального сервиса для школ и развития спортивных инициатив.",
+    highlights: ["Состав платформы.", "Ключевые пользовательские сценарии.", "Первичные требования.", "Возможная структура сервиса."],
+    stack: ["Discovery", "Requirements", "Service design"],
+    media: [],
+  },
+  {
     id: "ai-presale",
     title: "AI Presale Assistant",
     shortTitle: "AI Presale",
@@ -354,9 +428,37 @@ const projectGroups = [
   { id: "ai", label: "AI и интеллектуальные инструменты", shortLabel: "AI" },
   { id: "digital", label: "Цифровые продукты", shortLabel: "Продукты" },
   { id: "interactive", label: "Эксперименты и интерактив", shortLabel: "Интерактив" },
+  { id: "presale", label: "Presale и проектирование решений", shortLabel: "Presale" },
 ];
 
 const projectDetails = {
+  "sales-workspace": {
+    category: "automation",
+    status: "Рабочая версия · внутреннее тестирование",
+    problem: "Обучение, материалы, статусы команды, данные поставщиков и подготовка коммерческих предложений существовали как отдельные процессы. Менеджерам приходилось вручную искать позиции и собирать предложения.",
+    solution: "Единое рабочее пространство, которое связывает обучение, командные статусы, каталог, подготовку данных и конструктор коммерческих предложений.",
+    result: "Собрана рабочая первая версия продукта для внутреннего тестирования. Показатели эффективности пока не измерялись.",
+    technologies: [".NET 8", "PostgreSQL", "Vue SPA", "HTML", "CSS", "JavaScript"],
+    tools: ["Codex", "Product design", "UX scenarios"],
+  },
+  "national-education": {
+    category: "digital",
+    status: "Сайт работает · точная роль требует уточнения",
+    problem: "Поставщику школьного оборудования требовалось представить большой ассортимент, готовые классы и выполненные проекты в понятной структуре.",
+    solution: "Корпоративный сайт с каталогом, предметными категориями, готовыми комплектами, реализованными проектами и формами заявки.",
+    result: "На сайте собраны каталог, готовые классы, выполненные проекты и формы заявки. Метрики сайта и результаты бизнеса не относятся к моим личным достижениям.",
+    technologies: ["Web", "Responsive", "Catalog", "Forms"],
+    tools: ["Точная роль требует уточнения"],
+  },
+  "school-sport-portal": {
+    category: "presale",
+    status: "Консультация / presale-проработка",
+    problem: "Требовалось определить возможный состав региональной платформы и основные сценарии её пользователей.",
+    solution: "Проработаны первичные требования, пользовательские сценарии и возможная структура сервиса.",
+    result: "Подготовлена консультационная основа для дальнейшей оценки и проектирования. Реализация не заявляется.",
+    technologies: ["Discovery", "Requirements", "Service design"],
+    tools: ["Presale"],
+  },
   "ai-presale": {
     category: "ai",
     type: "AI / Presale Automation",
@@ -401,7 +503,7 @@ const projectDetails = {
       "Конверсия, причины потери, фильтры и сводные показатели.",
       "Экспорт отчётности.",
     ],
-    result: "Информация о проектных продажах централизована, а контроль воронки стал прозрачнее.",
+    result: "В рабочей версии данные о предложениях, статусах и потенциальной выручке собраны в одном интерфейсе. Эффект на бизнес-показатели не измерялся.",
     technologies: [".NET 8", "PostgreSQL", "Bootstrap", "HTML", "CSS", "JavaScript"],
     tools: ["Codex"],
   },
@@ -504,10 +606,19 @@ const projectDetails = {
 
 projects.forEach((project) => Object.assign(project, projectDetails[project.id]));
 
+const projectOrder = [
+  "territory", "vich", "sales-workspace", "ai-presale", "sales-flow-crm", "estimate-builder",
+  "national-education", "pik", "kids-rules", "currency", "crossy", "insurance", "donor",
+  "school-sport-portal",
+];
+
+projects.sort((a, b) => projectOrder.indexOf(a.id) - projectOrder.indexOf(b.id));
+
 const state = {
   activeId: projects[0].id,
   activeIndex: 0,
   activeMediaIndex: 0,
+  activeGroup: "all",
   autoplayPaused: false,
   autoplayTimer: null,
   lastFocusedElement: null,
@@ -551,6 +662,12 @@ function getGroup(category) {
   return projectGroups.find((group) => group.id === category) || projectGroups[0];
 }
 
+function getVisibleProjects() {
+  return state.activeGroup === "all"
+    ? projects
+    : projects.filter((project) => project.category === state.activeGroup);
+}
+
 function estimateFlowMarkup(compact = false) {
   const steps = [
     ["01", "Создание проекта"],
@@ -587,7 +704,7 @@ function showcaseMediaMarkup(project) {
   }
 
   if (item?.type === "image") {
-    return `<img src="${item.src}" alt="" draggable="false" />`;
+    return `<img class="${project.mediaFit === "cover" ? "is-cover" : ""}" src="${item.src}" alt="" draggable="false" />`;
   }
 
   if (item?.type === "video") {
@@ -643,10 +760,6 @@ function projectSlideMarkup(project, index) {
 }
 
 function renderProjectNodes() {
-  projectNodes.innerHTML = projects
-    .map((project, index) => projectSlideMarkup(project, index))
-    .join("");
-
   projectGroupsNode.innerHTML = projectGroups
     .map((group) => {
       const count = group.id === "all" ? projects.length : projects.filter((project) => project.category === group.id).length;
@@ -658,13 +771,34 @@ function renderProjectNodes() {
     })
     .join("");
 
-  projectIndex.innerHTML = projects
+  renderVisibleProjects();
+
+  projectGroupsNode.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.dataset.group === state.activeGroup) return;
+      state.activeGroup = button.dataset.group;
+      state.activeIndex = 0;
+      renderVisibleProjects();
+      renderCaseNav();
+      setActiveProject(0);
+    });
+  });
+}
+
+function renderVisibleProjects() {
+  const visibleProjects = getVisibleProjects();
+
+  projectNodes.innerHTML = visibleProjects
+    .map((project, index) => projectSlideMarkup(project, index))
+    .join("");
+
+  projectIndex.innerHTML = visibleProjects
     .map(
       (project) => `
         <button
           type="button"
           data-project="${project.id}"
-          class="${project.id === projects[0].id ? "is-active" : ""}"
+          class="${project.id === visibleProjects[0]?.id ? "is-active" : ""}"
           aria-label="Выбрать проект ${project.title}"
         ><span aria-hidden="true"></span></button>
       `,
@@ -677,25 +811,14 @@ function renderProjectNodes() {
 
   projectIndex.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
-      const index = projects.findIndex((project) => project.id === button.dataset.project);
+      const index = visibleProjects.findIndex((project) => project.id === button.dataset.project);
       setActiveProject(index, index < state.activeIndex ? "backward" : "forward");
-    });
-  });
-
-  projectGroupsNode.querySelectorAll("button").forEach((button) => {
-    button.addEventListener("click", () => {
-      const targetIndex = button.dataset.group === "all"
-        ? 0
-        : projects.findIndex((project) => project.category === button.dataset.group);
-      if (targetIndex >= 0) {
-        setActiveProject(targetIndex, targetIndex < state.activeIndex ? "backward" : "forward");
-      }
     });
   });
 }
 
 function renderCaseNav() {
-  caseNav.innerHTML = projects
+  caseNav.innerHTML = getVisibleProjects()
     .map(
       (project) => `
         <button type="button" data-project="${project.id}">
@@ -718,7 +841,7 @@ function getProject(id) {
 function resetShowcaseProgress() {
   showcaseProgress.classList.remove("is-running");
   void showcaseProgress.offsetWidth;
-  if (!state.autoplayPaused) {
+  if (!state.autoplayPaused && getVisibleProjects().length > 1) {
     showcaseProgress.classList.add("is-running");
   }
 }
@@ -727,7 +850,7 @@ function restartAutoplay() {
   window.clearTimeout(state.autoplayTimer);
   resetShowcaseProgress();
 
-  if (!state.autoplayPaused) {
+  if (!state.autoplayPaused && getVisibleProjects().length > 1) {
     state.autoplayTimer = window.setTimeout(() => {
       setActiveProject(state.activeIndex + 1, "forward");
     }, 6500);
@@ -735,12 +858,17 @@ function restartAutoplay() {
 }
 
 function setActiveProject(index, direction = "forward") {
-  const normalizedIndex = (index + projects.length) % projects.length;
-  const project = projects[normalizedIndex];
+  const visibleProjects = getVisibleProjects();
+  const normalizedIndex = (index + visibleProjects.length) % visibleProjects.length;
+  const project = visibleProjects[normalizedIndex];
   state.activeIndex = normalizedIndex;
   state.activeId = project.id;
   setAccent(project);
   projectShowcase.classList.toggle("is-backward", direction === "backward");
+  const hasMultipleProjects = visibleProjects.length > 1;
+  prevButton.disabled = !hasMultipleProjects;
+  nextButton.disabled = !hasMultipleProjects;
+  pulseButton.disabled = !hasMultipleProjects;
 
   projectNodes.querySelectorAll(".project-slide").forEach((slide, slideIndex) => {
     const isActive = slideIndex === normalizedIndex;
@@ -759,26 +887,31 @@ function setActiveProject(index, direction = "forward") {
     const isActive = buttonIndex === normalizedIndex;
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-current", isActive ? "true" : "false");
+    button.setAttribute("aria-pressed", String(isActive));
   });
 
   projectGroupsNode.querySelectorAll("button").forEach((button) => {
-    const isActive = button.dataset.group === project.category;
+    const isActive = button.dataset.group === state.activeGroup;
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-current", isActive ? "true" : "false");
   });
 
   showcaseCounter.textContent =
-    `${String(normalizedIndex + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
+    `${String(normalizedIndex + 1).padStart(2, "0")} / ${String(visibleProjects.length).padStart(2, "0")}`;
   restartAutoplay();
 }
 
 function openCase(id, originElement) {
   const project = getProject(id);
-  const index = projects.findIndex((item) => item.id === project.id);
+  const visibleProjects = getVisibleProjects();
+  const visibleIndex = visibleProjects.findIndex((item) => item.id === project.id);
+  const index = visibleIndex >= 0 ? visibleIndex : projects.findIndex((item) => item.id === project.id);
+  const total = visibleIndex >= 0 ? visibleProjects.length : projects.length;
   const isCaseAlreadyOpen = document.body.classList.contains("case-open");
   window.clearTimeout(state.autoplayTimer);
   showcaseProgress.classList.remove("is-running");
   state.activeId = project.id;
+  if (visibleIndex >= 0) state.activeIndex = visibleIndex;
   state.activeMediaIndex = 0;
   setAccent(project);
 
@@ -789,7 +922,7 @@ function openCase(id, originElement) {
   root.style.setProperty("--origin-y", `${Math.round(y)}px`);
 
   document.querySelector("#caseCounter").textContent =
-    `${String(index + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
+    `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
   document.querySelector("#caseClient").textContent = project.client;
   document.querySelector("#caseType").textContent = project.type;
   document.querySelector("#caseTitle").textContent = project.title;
@@ -836,6 +969,11 @@ function openCase(id, originElement) {
   caseNav.querySelectorAll("button").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.project === project.id);
   });
+  const activeCaseButton = caseNav.querySelector("button.is-active");
+  if (activeCaseButton) {
+    const targetLeft = activeCaseButton.offsetLeft - (caseNav.clientWidth - activeCaseButton.offsetWidth) / 2;
+    caseNav.scrollTo({ left: targetLeft, behavior: isCaseAlreadyOpen ? "smooth" : "auto" });
+  }
 
   renderMedia(project, 0);
   if (!isCaseAlreadyOpen) {
@@ -885,6 +1023,7 @@ function renderMedia(project, mediaIndex) {
     }
     caseVideo.play().catch(() => {});
   } else {
+    mediaFrame.style.setProperty("--media-ratio", "16 / 9");
     caseVideo.pause();
     caseVideo.removeAttribute("src");
     caseVideo.load();
@@ -892,15 +1031,6 @@ function renderMedia(project, mediaIndex) {
     caseImage.src = item.src;
     caseImage.alt = item.label;
     caseImage.style.display = "block";
-    caseImage.onload = () => {
-      if (caseImage.naturalWidth && caseImage.naturalHeight && caseImage.getAttribute("src") === item.src) {
-        mediaFrame.style.setProperty("--media-ratio", `${caseImage.naturalWidth} / ${caseImage.naturalHeight}`);
-      }
-    };
-
-    if (caseImage.complete && caseImage.naturalWidth && caseImage.naturalHeight) {
-      mediaFrame.style.setProperty("--media-ratio", `${caseImage.naturalWidth} / ${caseImage.naturalHeight}`);
-    }
   }
 
   mediaPills.innerHTML =
@@ -927,8 +1057,7 @@ function closeCase() {
   caseView.setAttribute("aria-hidden", "true");
   homeView.removeAttribute("inert");
   caseVideo.pause();
-  projectNodes.querySelector(".project-slide.is-active video")?.play().catch(() => {});
-  restartAutoplay();
+  setActiveProject(state.activeIndex);
   state.lastFocusedElement?.focus();
 }
 
@@ -976,12 +1105,14 @@ document.addEventListener("keydown", (event) => {
     closeCase();
   }
   if (document.body.classList.contains("case-open") && event.key === "ArrowLeft") {
-    const currentIndex = projects.findIndex((project) => project.id === state.activeId);
-    openCase(projects[(currentIndex - 1 + projects.length) % projects.length].id);
+    const visibleProjects = getVisibleProjects();
+    const currentIndex = visibleProjects.findIndex((project) => project.id === state.activeId);
+    openCase(visibleProjects[(currentIndex - 1 + visibleProjects.length) % visibleProjects.length].id);
   }
   if (document.body.classList.contains("case-open") && event.key === "ArrowRight") {
-    const currentIndex = projects.findIndex((project) => project.id === state.activeId);
-    openCase(projects[(currentIndex + 1) % projects.length].id);
+    const visibleProjects = getVisibleProjects();
+    const currentIndex = visibleProjects.findIndex((project) => project.id === state.activeId);
+    openCase(visibleProjects[(currentIndex + 1) % visibleProjects.length].id);
   }
   if (!document.body.classList.contains("case-open")) {
     if (event.key === "ArrowLeft") showPreviousProject();
