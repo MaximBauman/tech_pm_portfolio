@@ -28,7 +28,15 @@
       <section class="home-view" id="homeView" aria-label="Главный экран портфолио">
         <aside class="identity-panel">
           <header class="topbar">
-            <a class="mark" href="#homeView" aria-label="На главный экран">MB</a>
+            <button
+              class="mark"
+              id="profileTrigger"
+              type="button"
+              aria-label="Открыть карточку Максима Баумана"
+              aria-haspopup="dialog"
+              aria-controls="profileDialog"
+              aria-expanded="false"
+            >MB</button>
             <nav class="contact-links" aria-label="Контакты">
               <a href="mailto:m.bauman.x@gmail.com">mail</a>
               <a href="https://t.me/max_bauman" target="_blank" rel="noreferrer">telegram</a>
@@ -152,6 +160,24 @@
         </section>
 
       </section>
+
+      <dialog class="profile-dialog" id="profileDialog" aria-labelledby="profileDialogTitle">
+        <article class="profile-card">
+          <button class="profile-close" id="profileClose" type="button" aria-label="Закрыть карточку">×</button>
+          <img
+            class="profile-photo"
+            src="assets/profile/maxim-bauman.jpg"
+            alt="Максим Бауман"
+          />
+          <p class="profile-label">Профиль</p>
+          <h2 id="profileDialogTitle">Максим Бауман</h2>
+          <p class="profile-position">Technical Project Manager</p>
+          <div class="profile-contacts">
+            <a href="https://t.me/max_bauman" target="_blank" rel="noreferrer">Telegram</a>
+            <a href="mailto:m.bauman.x@gmail.com">Email</a>
+          </div>
+        </article>
+      </dialog>
 
       <section class="case-view" id="caseView" aria-hidden="true">
         <div class="case-bg" aria-hidden="true"></div>

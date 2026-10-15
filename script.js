@@ -644,6 +644,9 @@ const backButton = document.querySelector("#backButton");
 const caseNav = document.querySelector("#caseNav");
 const mediaPills = document.querySelector("#mediaPills");
 const caseAward = document.querySelector("#caseAward");
+const profileTrigger = document.querySelector("#profileTrigger");
+const profileDialog = document.querySelector("#profileDialog");
+const profileClose = document.querySelector("#profileClose");
 
 function setAccent(project) {
   root.style.setProperty("--accent", project.color);
@@ -1092,6 +1095,26 @@ prevButton.addEventListener("click", showPreviousProject);
 nextButton.addEventListener("click", showNextProject);
 pulseButton.addEventListener("click", toggleAutoplay);
 backButton.addEventListener("click", closeCase);
+profileTrigger.addEventListener("click", () => {
+  profileTrigger.setAttribute("aria-expanded", "true");
+  profileDialog.showModal();
+});
+
+function closeProfileDialog() {
+  profileTrigger.setAttribute("aria-expanded", "false");
+  profileDialog.close();
+  profileTrigger.focus();
+}
+
+profileClose.addEventListener("click", closeProfileDialog);
+profileDialog.addEventListener("click", (event) => {
+  if (event.target === profileDialog) closeProfileDialog();
+});
+profileDialog.addEventListener("cancel", () => profileTrigger.setAttribute("aria-expanded", "false"));
+profileDialog.addEventListener("close", () => {
+  profileTrigger.setAttribute("aria-expanded", "false");
+  profileTrigger.focus();
+});
 
 mediaPills.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-media-index]");

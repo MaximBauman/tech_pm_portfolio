@@ -114,7 +114,114 @@ body.case-open .home-view {
   place-items: center;
   width: 48px;
   height: 48px;
+  padding: 0;
   font-weight: 850;
+  cursor: pointer;
+}
+
+.profile-dialog {
+  width: min(342px, calc(100vw - 28px));
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 8px;
+  color: var(--ink);
+  background: transparent;
+}
+
+.profile-dialog::backdrop {
+  background: rgba(18, 22, 28, 0.42);
+  backdrop-filter: blur(7px);
+}
+
+.profile-card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(22, 24, 29, 0.14);
+  border-radius: 8px;
+  background: rgba(250, 250, 246, 0.98);
+  box-shadow: 0 28px 90px rgba(18, 22, 28, 0.28);
+}
+
+.profile-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 1.45rem;
+  line-height: 1;
+  background: rgba(255, 255, 250, 0.86);
+  cursor: pointer;
+}
+
+.profile-photo {
+  width: 132px;
+  height: 132px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(22, 24, 29, 0.12);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 32%;
+}
+
+.profile-label {
+  margin-bottom: 8px;
+  color: rgb(var(--accent-rgb));
+  font-size: 0.7rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.profile-card h2 {
+  margin-bottom: 6px;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.profile-position {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.profile-contacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.profile-contacts a {
+  display: grid;
+  place-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 780;
+  background: rgba(255, 255, 250, 0.8);
+}
+
+.profile-contacts a:first-child {
+  border-color: rgba(var(--accent-rgb), 0.42);
+  background: rgba(var(--accent-rgb), 0.1);
+}
+
+.profile-close:hover,
+.profile-contacts a:hover {
+  border-color: rgba(var(--accent-rgb), 0.54);
+  background: rgba(var(--accent-rgb), 0.13);
 }
 
 .contact-links {
