@@ -1291,16 +1291,6 @@ body.case-open .case-view {
   box-shadow: 0 26px 90px rgba(0, 0, 0, 0.28);
 }
 
-.media-frame::before {
-  position: absolute;
-  inset: 12px;
-  z-index: 2;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 6px;
-  pointer-events: none;
-  content: "";
-}
-
 .media-frame video,
 .media-frame img {
   display: block;
@@ -1662,11 +1652,11 @@ body.case-open .case-view {
   .case-info {
     max-height: none;
     overflow: visible;
-    order: 2;
+    order: 1;
   }
 
   .case-media {
-    order: 1;
+    order: 2;
   }
 
   .case-info h2 {
@@ -1758,6 +1748,10 @@ body.case-open .case-view {
   .showcase-status {
     top: 14px;
     right: 14px;
+  }
+
+  .showcase-status span:last-child {
+    display: none;
   }
 
   .estimate-flow.is-compact {
