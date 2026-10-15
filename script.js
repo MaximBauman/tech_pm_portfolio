@@ -750,7 +750,7 @@ function projectSlideMarkup(project, index) {
           ${awardMarkup}
           <span class="showcase-footer">
             <span class="showcase-status-label">${project.status}</span>
-            <span class="showcase-cta">Открыть кейс <span aria-hidden="true">↗</span></span>
+            <span class="showcase-cta">Открыть кейс</span>
           </span>
         </span>
         <span class="showcase-media">
