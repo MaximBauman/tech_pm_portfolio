@@ -34,7 +34,7 @@ const projects = [
   },
   {
     id: "national-education",
-    title: "Сайт «Национальное образование»",
+    title: "Сайт «Нацобразование»",
     shortTitle: "Нацобразование",
     client: "Национальное образование",
     type: "Corporate website / EdTech",
@@ -743,7 +743,7 @@ function projectSlideMarkup(project, index) {
           </span>
           <span class="showcase-group">${getGroup(project.category).label}</span>
           <span class="showcase-type">${project.type}</span>
-          <strong class="showcase-title${project.title.length > 34 ? " is-long" : ""}">${project.title}</strong>
+          <strong class="showcase-title${project.title.length > 20 ? " is-long" : ""}">${project.title}</strong>
           ${awardMarkup}
           <span class="showcase-footer">
             <span class="showcase-status-label">${project.status}</span>
